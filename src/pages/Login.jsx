@@ -213,13 +213,13 @@ function Login() {
     event.preventDefault();
     axios
       .post(
-        "https://serverc-4y5e.onrender.com/login",
+        "https://serverc-4y5e.onrender.com:10000/login",
         { usuario: values.usuario, password: values.password },
         { withCredentials: true },
       )
       .then((res) => {
         axios
-          .get("https://serverc-4y5e.onrender.com/getSession", { withCredentials: true }) //envia values a "servidor/registro"
+          .get("https://serverc-4y5e.onrender.com:10000/getSession", { withCredentials: true }) //envia values a "servidor/registro"
           .then((res) => {
             console.log(res);
           })
