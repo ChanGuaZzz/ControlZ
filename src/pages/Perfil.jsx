@@ -32,7 +32,7 @@ function Perfil() {
   const [Guardado, setGuardado] = useState(true);
   console.log("Objetivo", opcionObjetivo);
   console.log("Actividad fisica", opcionActividadFisica);
-  
+  axios.defaults.withCredentials = true;
   const ModificarDB = () => {
 console.log("modificandoOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
     const values = {
