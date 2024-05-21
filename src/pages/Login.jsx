@@ -20,7 +20,7 @@ function Login() {
       window.removeEventListener('resize', actualizarAnchoVentana);
     };
   }, []);
-
+ axios.defaults.withCredentials = true;
 
   const [values, setValues] = useState({
     usuario: "",
