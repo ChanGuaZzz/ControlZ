@@ -158,7 +158,7 @@ export default function CarritoCompra({ visible, onClose }) {
                         <p>${pricetotal}</p>
                       </div>
                       <p className="tw-mt-0.5 tw-text-sm tw-text-gray-500">
-                        Gastos de envio + IVA incluidos (207€ de impuestos, Happens)
+                        Gastos de envio + IVA incluidos 
                       </p>
                       <div className="tw-mt-4">
                         <a
