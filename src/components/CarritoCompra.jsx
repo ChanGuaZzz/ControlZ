@@ -28,7 +28,7 @@ export default function CarritoCompra({ visible, onClose }) {
     id: 3,
     name: 'Barrita proteica',
     href: '#',
-    color: 'lechita',
+    color: 'leche',
     price: 20,
     quantity: 2,
     imageSrc: barraProteina,
