@@ -5,11 +5,6 @@ import proteinaPolvo from "../img/proteinaPolvo.png"
 import barraProteina from "../img/barraProteina.png"
 
 export default function CarritoCompra({ visible, onClose }) {
-
-  const [price,setPrice]= useState([20,15,20,15]);
-
-  
-
   const [products, setProducts] = useState([{
     id: 1,
     name: 'Proteina en polvo',
@@ -50,7 +45,7 @@ export default function CarritoCompra({ visible, onClose }) {
   }
   ]);
 
-  const [pricetotal,setPricetotal]=useState(0);
+  const [pricetotal,setPricetotal]=useState(262);
 
   const handleRemove = (productToRemove) => {
     setProducts(products.filter(product => product !== productToRemove)); //devuelve cada producto si no es igual al que hay que eliminar
