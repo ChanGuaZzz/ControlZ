@@ -15,7 +15,7 @@ export default function CarritoCompra({ visible, onClose }) {
     name: 'Proteina en polvo',
     href: '#',
     color: 'cacao',
-    price: `$ ${price[0]}`,
+    price: 20,
     quantity: 1,
     imageSrc: proteinaPolvo,
   },
@@ -24,7 +24,7 @@ export default function CarritoCompra({ visible, onClose }) {
     name: 'SuperZapas',
     href: '#',
     color: 'Azul',
-    price: `$ ${price[1]}`,
+    price: 15,
     quantity: 1,
     imageSrc: 'https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
 
@@ -34,7 +34,7 @@ export default function CarritoCompra({ visible, onClose }) {
     name: 'Barrita proteica',
     href: '#',
     color: 'lechita',
-    price: `$ ${price[2]}`,
+    price: 20,
     quantity: 2,
     imageSrc: barraProteina,
   },
@@ -43,15 +43,19 @@ export default function CarritoCompra({ visible, onClose }) {
     name: 'SuperZapas',
     href: '#',
     color: 'Azul',
-    price: `$ ${price[3]}`,
+    price: 15,
     quantity: 1,
     imageSrc: 'https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
 
   }
   ]);
 
+  const [pricetotal,setPricetotal]=useState(0);
+
   const handleRemove = (productToRemove) => {
     setProducts(products.filter(product => product !== productToRemove)); //devuelve cada producto si no es igual al que hay que eliminar
+    const precio= products.reduce((acc, product) => acc + product.price, 0)
+    setPricetotal(precio)
   };
 
   useEffect(() => {
@@ -127,7 +131,7 @@ export default function CarritoCompra({ visible, onClose }) {
                                       <h3>
                                         <a href={"/tienda"}>{product.name}</a>
                                       </h3>
-                                      <p className="tw-ml-4">{product.price}</p>
+                                      <p className="tw-ml-4">${product.price}.00</p>
                                     </div>
                                     <p className="tw-mt-1 tw-text-sm tw-text-gray-500">{product.color}</p>
                                   </div>
@@ -156,7 +160,7 @@ export default function CarritoCompra({ visible, onClose }) {
                     <div className="tw-border-t alturaResp tw-border-gray-200 tw-px-4 tw-py-6">
                       <div className="tw-flex tw-justify-between tw-text-base tw-font-medium tw-text-gray-900">
                         <p>Total</p>
-                        <p>$262.00</p>
+                        <p>${pricetotal}</p>
                       </div>
                       <p className="tw-mt-0.5 tw-text-sm tw-text-gray-500">
                         Gastos de envio + IVA incluidos (207€ de impuestos, Happens)
