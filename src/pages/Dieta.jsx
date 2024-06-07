@@ -24,7 +24,6 @@ function Dieta() {
     console.error(error);
   });
 
-  console.log("usuario", usuario);
   const [ShowFoodModal, SetShowFoodModal] = useState(false);
   //proteinas
   const [proteinConsumed, setProteinConsumed] = useState(0);
