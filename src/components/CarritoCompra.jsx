@@ -45,7 +45,7 @@ export default function CarritoCompra({ visible, onClose }) {
   }
   ]);
 
-  const [pricetotal,setPricetotal]=useState(262);
+  const [pricetotal,setPricetotal]=useState(products.reduce((acc, product) => acc + product.price, 0));
 
   const handleRemove = (productToRemove) => {
     setProducts(products.filter(product => product !== productToRemove)); //devuelve cada producto si no es igual al que hay que eliminar
