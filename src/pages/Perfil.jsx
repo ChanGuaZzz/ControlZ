@@ -24,9 +24,9 @@ function Perfil() {
   const [Telefono, setTelefono] = useState("");
   const [direccion, setDireccion] = useState("");
   const [sexo, setSexo] = useState(null);
-  const [edad, setedad] = useState(0);
-  const [peso, setpeso] = useState(0);
-  const [altura, setaltura] = useState(0);
+  const [edad, setedad] = useState(null);
+  const [peso, setpeso] = useState(null);
+  const [altura, setaltura] = useState(null);
   const [opcionActividadFisica, setOpcionActividadFisica] = useState(1);
   const [opcionObjetivo, setopcionObjetivo] = useState(1);
   const [Guardado, setGuardado] = useState(true);
