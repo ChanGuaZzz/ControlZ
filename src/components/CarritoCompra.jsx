@@ -49,9 +49,12 @@ export default function CarritoCompra({ visible, onClose }) {
 
   const handleRemove = (productToRemove) => {
     setProducts((prev)=> prev = products.filter(product => product !== productToRemove)); //devuelve cada producto si no es igual al que hay que eliminar
+  };
+
+  useEffect(() => {
     const precio= products.reduce((acc, product) => acc + product.price, 0)
     setPricetotal(precio)
-  };
+  },[products])
 
   useEffect(() => {
     const number = products.length;
