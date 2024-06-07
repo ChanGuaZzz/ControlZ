@@ -30,11 +30,8 @@ function Perfil() {
   const [opcionActividadFisica, setOpcionActividadFisica] = useState(1);
   const [opcionObjetivo, setopcionObjetivo] = useState(1);
   const [Guardado, setGuardado] = useState(true);
-  console.log("Objetivo", opcionObjetivo);
-  console.log("Actividad fisica", opcionActividadFisica);
   axios.defaults.withCredentials = true;
   const ModificarDB = () => {
-console.log("modificandoOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
     const values = {
       nombre: nombre,
       email: email,
@@ -50,7 +47,6 @@ console.log("modificandoOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
     };
     axios.post("https://serverc-4y5e.onrender.com/modificar", values, { withCredentials: true })
       .then((res) => {
-        console.log(res);
       })
       .catch((err) => console.error(err));
     
@@ -70,10 +66,8 @@ console.log("modificandoOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
         setaltura(res.data.altura);
         setOpcionActividadFisica(res.data.actividadfisica);
         setopcionObjetivo(res.data.objetivo);
-        console.log(res);
       })
       .catch((err) => console.error(err));
-    console.log("hola");
     setGuardado(true);
   }, []);
   const [isEditing, setIsEditing] = useState('');
@@ -316,7 +310,6 @@ console.log("modificandoOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
                   <p className="tw-text-base tw-w-auto " >
                     Actividad Física
                   </p>
-                  {console.log("Actividad fisica estoy aqui", opcionActividadFisica)}
                   <select value={opcionActividadFisica} className="tw-border tw-text-[15px] tw-rounded-lg tw-h-10 tw-border-blue-300 tw-text-center tw-w-auto form-select" name="actividadFisica" placeholder="..."
                     onChange={(e) => { setOpcionActividadFisica(e.target.value); }}
                     onBlur={() => { ModificarDB(); setIsEditing(''); }}
