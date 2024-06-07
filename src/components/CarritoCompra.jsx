@@ -6,12 +6,16 @@ import barraProteina from "../img/barraProteina.png"
 
 export default function CarritoCompra({ visible, onClose }) {
 
+  const [price,setPrice]= useState([20,15,20,15]);
+
+  
+
   const [products, setProducts] = useState([{
     id: 1,
     name: 'Proteina en polvo',
     href: '#',
     color: 'cacao',
-    price: '$20.00',
+    price: `$ ${price[0]}`,
     quantity: 1,
     imageSrc: proteinaPolvo,
   },
@@ -20,7 +24,7 @@ export default function CarritoCompra({ visible, onClose }) {
     name: 'SuperZapas',
     href: '#',
     color: 'Azul',
-    price: '$15',
+    price: `$ ${price[1]}`,
     quantity: 1,
     imageSrc: 'https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
 
@@ -30,7 +34,7 @@ export default function CarritoCompra({ visible, onClose }) {
     name: 'Barrita proteica',
     href: '#',
     color: 'lechita',
-    price: '$20.00',
+    price: `$ ${price[2]}`,
     quantity: 2,
     imageSrc: barraProteina,
   },
@@ -39,7 +43,7 @@ export default function CarritoCompra({ visible, onClose }) {
     name: 'SuperZapas',
     href: '#',
     color: 'Azul',
-    price: '$15',
+    price: `$ ${price[3]}`,
     quantity: 1,
     imageSrc: 'https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
 
