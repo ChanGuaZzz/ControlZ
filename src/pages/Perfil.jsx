@@ -257,7 +257,7 @@ function Perfil() {
                       <h1 className=" tw-flex tw-justify-center tw-text-blue-500  tw-text-center tw-w-1/3 tw-font-medium">{edad}</h1>
                     )}
                   </div>
-                  {edad && <button className="tw-rounded-md tw-w-auto" onClick={() => setIsEditing('edad')}><Pen/></button>}
+                  {usuario && <button className="tw-rounded-md tw-w-auto" onClick={() => setIsEditing('edad')}><Pen/></button>}
 
                 </div>
 
@@ -280,7 +280,7 @@ function Perfil() {
                       <h1 className=" tw-flex tw-justify-center tw-text-blue-500  tw-text-center tw-w-1/3 tw-font-medium">{peso}</h1>
                     )}
                   </div>
-                  {peso && <button className="tw-rounded-md tw-w-auto" onClick={() => setIsEditing('peso')}><Pen/></button>}
+                  {usuario && <button className="tw-rounded-md tw-w-auto" onClick={() => setIsEditing('peso')}><Pen/></button>}
                 </div>
 
                 <div className="tw-w-full tw-flex mb-1">
@@ -302,7 +302,7 @@ function Perfil() {
                       <h1 className=" tw-flex tw-justify-center tw-text-blue-500  tw-text-center tw-w-1/3 tw-font-medium">{altura}</h1>
                     )}
                   </div>
-                  {altura && <button className="tw-rounded-md tw-w-auto" onClick={() => setIsEditing('altura')}><Pen/></button>}
+                  {usuario && <button className="tw-rounded-md tw-w-auto" onClick={() => setIsEditing('altura')}><Pen/></button>}
                 </div>
 
 
