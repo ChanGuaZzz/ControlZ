@@ -219,7 +219,7 @@ const TablaRutina = () => {
             </svg>
           </button>
         </div>
-        <div className=" flex tw-mt-4  tw-h-60 tw-w-[90%] tw-overflow-auto tw-rounded-3xl tw-bg-slate-800 tw-p-[2%]">
+        <div className=" flex tw-mt-4  tw-h-[800px] tw-w-[90%] tw-overflow-auto tw-rounded-3xl tw-bg-slate-800 tw-p-[2%]">
           <div className=" tw-rounded-2xl tw-border-white">
             {rutina.map(
               (dia, index) =>
