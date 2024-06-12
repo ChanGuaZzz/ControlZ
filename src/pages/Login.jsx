@@ -443,7 +443,7 @@ function Login() {
                 </div>
                 <p
                   id="mensajeConstraseñaincorrectaInicio"
-                  className="text-danger position-absolute"
+                  className="animate__animated animate__headShake text-danger position-absolute"
                   style={{
                     display: showMensajeInicio ? "block" : "none",
                     height: "10px",
@@ -454,7 +454,7 @@ function Login() {
 
                 <p
                   id="mensajeConstraseñaincorrectaInicio"
-                  className="text-danger position-absolute"
+                  className="animate__animated animate__headShake text-danger position-absolute"
                   style={{
                     display: showMensajeNoExiste ? "block" : "none",
                     height: "10px",
