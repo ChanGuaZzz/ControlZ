@@ -64,6 +64,7 @@ function Login() {
   const [showErrorRegistro, setshowErrorRegistro] = useState(false);
   const [showMensajeInicio, setshowMensajeInicio] = useState(false);
   const [showMensajeNoExiste, setshowMensajeNoExiste] = useState(false);
+  const [animacion,setanimacion]=useState("");
 
 
   const btnComenzar = () => {
@@ -232,11 +233,29 @@ function Login() {
           res.request.response == '{"Error":"Contraseña incorrecta"}'
         ) {
           setshowMensajeNoExiste(false);
-          setshowMensajeInicio(true);
+          if(!showMensajeInicio){
+        setshowMensajeInicio(true);
+      }else{
+
+        setanimacion("animate__animated animate__headShake")
+        setTimeout(()=>{
+          setanimacion("")
+        },1000);
+      }
+           
         } else {
           console.log("entro al 201");
           setshowMensajeInicio(false);
+          
+        if(!showMensajeNoExiste){
           setshowMensajeNoExiste(true);
+        }else{
+
+        setanimacion("animate__animated animate__headShake")
+        setTimeout(()=>{
+          setanimacion("")
+        },1000);
+      }
         }
       })
       .catch((err) => console.log(err));
@@ -443,7 +462,7 @@ function Login() {
                 </div>
                 <p
                   id="mensajeConstraseñaincorrectaInicio"
-                  className="animate__animated animate__headShake text-danger position-absolute"
+                  className="${animacion} text-danger position-absolute"
                   style={{
                     display: showMensajeInicio ? "block" : "none",
                     height: "10px",
@@ -454,7 +473,7 @@ function Login() {
 
                 <p
                   id="mensajeConstraseñaincorrectaInicio"
-                  className="animate__animated animate__headShake text-danger position-absolute"
+                  className="${animacion} text-danger position-absolute"
                   style={{
                     display: showMensajeNoExiste ? "block" : "none",
                     height: "10px",
