@@ -48,13 +48,13 @@ function Tienda() {
 
           <Producto img={proteinaPolvo} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
-            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta",
+            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!",
             precio: "20€",
             precioScam: "25€",
             descuento: "20%",
             img: proteinaPolvo
           })}
-            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta"} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!"} precio={"20€"} precioScam={"25€"} descuento={"20%"}
 
           />
           <Producto img={barraProteina} onClick={() => AbrirModal({
@@ -69,13 +69,13 @@ function Tienda() {
           />
           <Producto img={proteinaPolvo} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
-            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta ",
+            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! ",
             precio: "20€",
             precioScam: "25€",
             descuento: "20%",
             img: proteinaPolvo
           })}
-            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta"} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!"} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={barraProteina} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
@@ -100,13 +100,13 @@ function Tienda() {
           />
           <Producto img={proteinaPolvo} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
-            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta. ",
+            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!. ",
             precio: "20€",
             precioScam: "25€",
             descuento: "20%",
             img: proteinaPolvo
           })}
-            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={barraProteina} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
@@ -120,13 +120,13 @@ function Tienda() {
           />
           <Producto img={proteinaPolvo} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
-            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta ",
+            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! ",
             precio: "20€",
             precioScam: "25€",
             descuento: "20%",
             img: proteinaPolvo
           })}
-            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta"} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!"} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={barraProteina} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
@@ -140,13 +140,13 @@ function Tienda() {
           />
           <Producto img={proteinaPolvo} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
-            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta  ",
+            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!  ",
             precio: "20€",
             precioScam: "25€",
             descuento: "20%",
             img: proteinaPolvo
           })}
-            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={barraProteina} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
@@ -160,13 +160,13 @@ function Tienda() {
           />
           <Producto img={proteinaPolvo} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
-            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta ",
+            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! ",
             precio: "20€",
             precioScam: "25€",
             descuento: "20%",
             img: proteinaPolvo
           })}
-            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
 
 
