@@ -48,85 +48,65 @@ function Tienda() {
 
           <Producto img={proteinaPolvo} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
-            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta calidad para apoyar su entrenamiento y sus objetivos de salud. Cada porción está cargada con 24 gramos de proteína pura, diseñada para ayudar en la recuperación y el crecimiento muscular.",
+            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta",
             precio: "20€",
             precioScam: "25€",
             descuento: "20%",
             img: proteinaPolvo
           })}
-            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta calidad para apoyar su entrenamiento y sus objetivos de salud. Cada porción está cargada con 24 gramos de proteína pura, diseñada para ayudar en la recuperación y el crecimiento muscular. "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta"} precio={"20€"} precioScam={"25€"} descuento={"20%"}
 
           />
           <Producto img={barraProteina} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
-            descripcion: "Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. Esta deliciosa barra está diseñada para ser tu aliado ideal en el camino hacia un estilo de vida saludable, proporcionando una fuente conveniente de proteínas de alta calidad para tus necesidades diarias.",
+            descripcion: "Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra.",
             precio: "20€",
             precioScam: "25€",
             descuento: "20%",
             img: barraProteina
           })}
-            nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. Esta deliciosa barra está diseñada para ser tu aliado ideal en el camino hacia un estilo de vida saludable, proporcionando una fuente conveniente de proteínas de alta calidad para tus necesidades diarias."} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+            nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra."} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={proteinaPolvo} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
-            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta calidad para apoyar su entrenamiento y sus objetivos de salud. Cada porción está cargada con 24 gramos de proteína pura, diseñada para ayudar en la recuperación y el crecimiento muscular. ",
+            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta ",
             precio: "20€",
             precioScam: "25€",
             descuento: "20%",
             img: proteinaPolvo
           })}
-            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta calidad para apoyar su entrenamiento y sus objetivos de salud. Cada porción está cargada con 24 gramos de proteína pura, diseñada para ayudar en la recuperación y el crecimiento muscular. "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta"} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={barraProteina} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
-            descripcion: "Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. Esta deliciosa barra está diseñada para ser tu aliado ideal en el camino hacia un estilo de vida saludable, proporcionando una fuente conveniente de proteínas de alta calidad para tus necesidades diarias.",
+            descripcion: "Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra.",
             precio: "20",
             precioScam: "25",
             descuento: "20%",
             img: barraProteina
 
           })}
-            nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. Esta deliciosa barra está diseñada para ser tu aliado ideal en el camino hacia un estilo de vida saludable, proporcionando una fuente conveniente de proteínas de alta calidad para tus necesidades diarias."} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+            nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra."} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={barraProteina} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
-            descripcion: "Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. Esta deliciosa barra está diseñada para ser tu aliado ideal en el camino hacia un estilo de vida saludable, proporcionando una fuente conveniente de proteínas de alta calidad para tus necesidades diarias.",
+            descripcion: "Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra.",
             precio: "20€",
             precioScam: "25€",
             descuento: "20%",
             img: barraProteina
           })}
-            nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. Esta deliciosa barra está diseñada para ser tu aliado ideal en el camino hacia un estilo de vida saludable, proporcionando una fuente conveniente de proteínas de alta calidad para tus necesidades diarias."} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+            nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra."} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={proteinaPolvo} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
-            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta calidad para apoyar su entrenamiento y sus objetivos de salud. Cada porción está cargada con 24 gramos de proteína pura, diseñada para ayudar en la recuperación y el crecimiento muscular. ",
+            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta. ",
             precio: "20€",
             precioScam: "25€",
             descuento: "20%",
             img: proteinaPolvo
           })}
-            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta calidad para apoyar su entrenamiento y sus objetivos de salud.  "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
-          />
-          <Producto img={barraProteina} onClick={() => AbrirModal({
-            nombre: "Barrita de Proteina",
-            descripcion: "Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. ",
-            precio: "20€",
-            precioScam: "25€",
-            descuento: "20%",
-            img: barraProteina
-          })}
-            nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
-          />
-          <Producto img={proteinaPolvo} onClick={() => AbrirModal({
-            nombre: "Proteina en polvo",
-            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta calidad para apoyar su entrenamiento y sus objetivos de salud. ",
-            precio: "20€",
-            precioScam: "25€",
-            descuento: "20%",
-            img: proteinaPolvo
-          })}
-            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta calidad para apoyar su entrenamiento y sus objetivos de salud. "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={barraProteina} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
@@ -140,33 +120,53 @@ function Tienda() {
           />
           <Producto img={proteinaPolvo} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
-            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta calidad para apoyar su entrenamiento y sus objetivos de salud.  ",
+            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta ",
             precio: "20€",
             precioScam: "25€",
             descuento: "20%",
             img: proteinaPolvo
           })}
-            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta calidad para apoyar su entrenamiento y sus objetivos de salud. "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta"} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={barraProteina} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
-            descripcion: "Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. Esta deliciosa barra está diseñada para ser tu aliado ideal en el camino hacia un estilo de vida saludable, proporcionando una fuente conveniente de proteínas de alta calidad para tus necesidades diarias.",
+            descripcion: "Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. ",
             precio: "20€",
             precioScam: "25€",
             descuento: "20%",
             img: barraProteina
           })}
-            nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. Esta deliciosa barra está diseñada para ser tu aliado ideal en el camino hacia un estilo de vida saludable, proporcionando una fuente conveniente de proteínas de alta calidad para tus necesidades diarias."} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+            nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={proteinaPolvo} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
-            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta calidad para apoyar su entrenamiento y sus objetivos de salud. ",
+            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta  ",
             precio: "20€",
             precioScam: "25€",
             descuento: "20%",
             img: proteinaPolvo
           })}
-            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta calidad para apoyar su entrenamiento y sus objetivos de salud. "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+          />
+          <Producto img={barraProteina} onClick={() => AbrirModal({
+            nombre: "Barrita de Proteina",
+            descripcion: "Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. ",
+            precio: "20€",
+            precioScam: "25€",
+            descuento: "20%",
+            img: barraProteina
+          })}
+            nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
+          />
+          <Producto img={proteinaPolvo} onClick={() => AbrirModal({
+            nombre: "Proteina en polvo",
+            descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta ",
+            precio: "20€",
+            precioScam: "25€",
+            descuento: "20%",
+            img: proteinaPolvo
+          })}
+            nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! Este suplemento premium es perfecto para aquellos que buscan una fuente de proteína de alta "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
 
 
