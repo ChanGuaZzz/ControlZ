@@ -1,5 +1,5 @@
-#ControlZ fitness Project
+# ControlZ fitness Project
 
-##Usage
+## Usage
 
 [ControlZ](https://controlz.onrender.com/)
