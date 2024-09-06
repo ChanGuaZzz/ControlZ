@@ -5,8 +5,7 @@ import CartasFeatures from "../components/CartasFeatures";
 import fotorutinaserv from "../img/fotorutinaserv.jpg";
 import fototiendaserv from "../img/fototiendaserv.jpg";
 import fotodietaserv from "../img/fotodietaserv.jpg";
-import fotoHombre from "../img/hombre.png";
-import fotoMujer from "../img/mujer.png";import fotogym from "../img/contact.jpg";
+import fotoPefil from "../img/ProfileServ.png";
 import foto1 from "../img/foto1.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -15,7 +14,6 @@ function Home() {
 
   const [mostrarTexto, setmostrarTexto] = useState(false)
   const [nombreUsuario, setNombreUsuario] = useState("");
-  const [sexo, setSexo] = useState(null);
   const cambiarDisplay = () => {
     setmostrarTexto(!mostrarTexto)
   }
@@ -26,7 +24,6 @@ function Home() {
     axios.get("https://serverc-4y5e.onrender.com/getSession", { withCredentials: true }) //envia values a "servidor/registro"
       .then((res) => {
         setNombreUsuario(res.data.usuario);
-        setSexo(res.data.sexo);
       })
       .catch((err) => console.error(err));
 
@@ -102,7 +99,7 @@ function Home() {
             </div>
             <div className="container mx-auto d-flex align-items-center justify-content-center ">
               <div className="card-group tw-flex tw-justify-center">
-                <div className="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 g-4  col-xl-12 col-lg-12 ">
+                <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 g-4 col-xl-12 col-lg-12 ">
                   <CartasFeatures imagen={fotorutinaserv} titulo={"Rutina"} descripcion={"LLeva un registro de tus rutinas personales y tu progreso gracias a la ayuda que ControlZ te brinda en el día a día."
                   }
                     link={"rutina"}
@@ -124,7 +121,7 @@ function Home() {
                     link={"tienda"}
                   />
                   <CartasFeatures
-                    imagen={sexo == 1 ? fotoHombre : fotoMujer}
+                    imagen={fotoPefil}
                     titulo={"Perfil"}
                     descripcion={
                       "Actualiza la información de tu perfil y revisa tus datos personales."

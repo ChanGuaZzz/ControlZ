@@ -437,8 +437,6 @@ function Perfil() {
                   </div>
                   {ObjProteinas && <button className="tw-rounded-md tw-w-auto" onClick={() => setIsEditing('ObjProteinas')}><Pen /></button>}
                 </div>
-
-
               </div>
             </div>
           </div>
