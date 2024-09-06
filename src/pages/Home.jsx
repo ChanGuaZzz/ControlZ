@@ -6,6 +6,7 @@ import fotorutinaserv from "../img/fotorutinaserv.jpg";
 import fototiendaserv from "../img/fototiendaserv.jpg";
 import fotodietaserv from "../img/fotodietaserv.jpg";
 import fotoPefil from "../img/ProfileServ.png";
+import fotogym from "../img/contact.jpg";
 import foto1 from "../img/foto1.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
