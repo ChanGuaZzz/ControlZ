@@ -3,10 +3,10 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CartasFeatures from "../components/CartasFeatures";
 import fotorutinaserv from "../img/fotorutinaserv.jpg";
-import fotoejerciciosexpli from "../img/fotoejerciciosexpli.jpg";
 import fototiendaserv from "../img/fototiendaserv.jpg";
 import fotodietaserv from "../img/fotodietaserv.jpg";
-import fotogym from "../img/contact.jpg";
+import fotoHombre from "../img/hombre.png";
+import fotoMujer from "../img/mujer.png";import fotogym from "../img/contact.jpg";
 import foto1 from "../img/foto1.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -15,7 +15,7 @@ function Home() {
 
   const [mostrarTexto, setmostrarTexto] = useState(false)
   const [nombreUsuario, setNombreUsuario] = useState("");
-
+  const [sexo, setSexo] = useState(null);
   const cambiarDisplay = () => {
     setmostrarTexto(!mostrarTexto)
   }
@@ -26,7 +26,7 @@ function Home() {
     axios.get("https://serverc-4y5e.onrender.com/getSession", { withCredentials: true }) //envia values a "servidor/registro"
       .then((res) => {
         setNombreUsuario(res.data.usuario);
-
+        setSexo(res.data.sexo);
       })
       .catch((err) => console.error(err));
 
@@ -122,6 +122,14 @@ function Home() {
                       "Consigue y hazte con algunos de nuestros productos de suplementación de la mano de las mejores marcas."
                     }
                     link={"tienda"}
+                  />
+                  <CartasFeatures
+                    imagen={sexo == 1 ? fotoHombre : fotoMujer}
+                    titulo={"Perfil"}
+                    descripcion={
+                      "Actualiza la información de tu perfil y revisa tus datos personales."
+                    }
+                    link={"perfil"}
                   />
                 </div>
               </div>
