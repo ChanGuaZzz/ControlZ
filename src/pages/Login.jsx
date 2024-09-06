@@ -20,7 +20,7 @@ function Login() {
       window.removeEventListener('resize', actualizarAnchoVentana);
     };
   }, []);
- axios.defaults.withCredentials = true;
+  axios.defaults.withCredentials = true;
 
   const [values, setValues] = useState({
     usuario: "",
@@ -33,6 +33,8 @@ function Login() {
     password2: "",
     actividadfisica: 1,
     objetivo: 1,
+    ObjProteinas: 0,
+    ObjCalorias: 0,
   });
 
   // Función para vaciar todos los campos
@@ -48,6 +50,8 @@ function Login() {
       password2: "",
       actividadfisica: 1,
       objetivo: 1,
+      ObjProteinas: 0,
+      ObjCalorias: 0,
     });
   };
 
@@ -64,7 +68,7 @@ function Login() {
   const [showErrorRegistro, setshowErrorRegistro] = useState(false);
   const [showMensajeInicio, setshowMensajeInicio] = useState(false);
   const [showMensajeNoExiste, setshowMensajeNoExiste] = useState(false);
-  const [animacion,setanimacion]=useState("");
+  const [animacion, setanimacion] = useState("");
 
 
   const btnComenzar = () => {
@@ -233,29 +237,29 @@ function Login() {
           res.request.response == '{"Error":"Contraseña incorrecta"}'
         ) {
           setshowMensajeNoExiste(false);
-          if(!showMensajeInicio){
-        setshowMensajeInicio(true);
-      }else{
+          if (!showMensajeInicio) {
+            setshowMensajeInicio(true);
+          } else {
 
-        setanimacion("animate__animated animate__headShake")
-        setTimeout(()=>{
-          setanimacion("")
-        },1000);
-      }
-           
+            setanimacion("animate__animated animate__headShake")
+            setTimeout(() => {
+              setanimacion("")
+            }, 1000);
+          }
+
         } else {
           console.log("entro al 201");
           setshowMensajeInicio(false);
-          
-        if(!showMensajeNoExiste){
-          setshowMensajeNoExiste(true);
-        }else{
 
-        setanimacion("animate__animated animate__headShake")
-        setTimeout(()=>{
-          setanimacion("")
-        },1000);
-      }
+          if (!showMensajeNoExiste) {
+            setshowMensajeNoExiste(true);
+          } else {
+
+            setanimacion("animate__animated animate__headShake")
+            setTimeout(() => {
+              setanimacion("")
+            }, 1000);
+          }
         }
       })
       .catch((err) => console.log(err));
@@ -742,9 +746,9 @@ function Login() {
                 <div className="tw-text-white tw-py-5 tw-text-md lg:tw-text-xl tw-justify-between tw-flex tw-w-full">
                   <h3 className="">Sexo</h3>
                   <div className="inline-flex tw-items-center">
-                    <input className="text-center tw-border tw-rounded-lg tw-border-blue-300 form-check-input" type="radio" value="1" onClick={(e)=>{setValues({ ...values, sexo: e.target.value })}} name="sexo"></input>
+                    <input className="text-center tw-border tw-rounded-lg tw-border-blue-300 form-check-input" type="radio" value="1" onClick={(e) => { setValues({ ...values, sexo: e.target.value }) }} name="sexo"></input>
                     <label htmlFor="sexo" className="tw-ml-1">M</label>
-                    <input className="text-center tw-border tw-rounded-lg tw-border-blue-300 form-check-input tw-ml-1" type="radio" value="0" onClick={(e)=>{setValues({ ...values, sexo: e.target.value })}} name="sexo"></input>
+                    <input className="text-center tw-border tw-rounded-lg tw-border-blue-300 form-check-input tw-ml-1" type="radio" value="0" onClick={(e) => { setValues({ ...values, sexo: e.target.value }) }} name="sexo"></input>
                     <label htmlFor="sexo" className="tw-ml-1">F</label>
                   </div>
                 </div>
