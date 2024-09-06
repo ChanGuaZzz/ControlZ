@@ -112,7 +112,7 @@ function Home() {
                       "Crea, modifica y sigue tu dieta a través de nuestra calculadora de macronutrientes para poder cumplir tus objetivos."
                     }
                     link={"dieta"}
-                  />{" "}
+                  />
                   <CartasFeatures
                     imagen={fototiendaserv}
                     titulo={"Tienda"}
