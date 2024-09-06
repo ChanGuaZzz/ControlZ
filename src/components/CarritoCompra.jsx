@@ -4,7 +4,7 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 import proteinaPolvo from "../img/proteinaPolvo.png"
 import barraProteina from "../img/barraProteina.png"
 
-export default function CarritoCompra({ visible, onClose }) {
+export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
   const [products, setProducts] = useState([{
     id: 1,
     name: 'Proteina en polvo',
@@ -57,11 +57,8 @@ export default function CarritoCompra({ visible, onClose }) {
   },[products])
 
   useEffect(() => {
-    const number = products.length;
-    console.log(number);
-    
-  }, [products.length]);
-
+    setNumeroItems(products.length);
+  }, [products]);
 
   return (
     <Transition.Root show={visible} as={Fragment}>
