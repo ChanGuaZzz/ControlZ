@@ -100,7 +100,7 @@ function Home() {
             </div>
             <div className="container mx-auto d-flex align-items-center justify-content-center ">
               <div className="card-group tw-flex tw-justify-center">
-                <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 g-4 col-xl-12 col-lg-12 ">
+                <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 g-4 col-xl-12 col-lg-9 ">
                   <CartasFeatures imagen={fotorutinaserv} titulo={"Rutina"} descripcion={"LLeva un registro de tus rutinas personales y tu progreso gracias a la ayuda que ControlZ te brinda en el día a día."
                   }
                     link={"rutina"}
@@ -125,8 +125,7 @@ function Home() {
                     imagen={fotoPefil}
                     titulo={"Perfil"}
                     descripcion={
-                      "Actualiza la información de tu perfil y revisa tus datos personales."
-                    }
+                      "Actualiza la información de tu perfil, revisa y establece tus datos personales para que tu información esté siempre al día."}
                     link={"perfil"}
                   />
                 </div>
