@@ -47,6 +47,8 @@ function Perfil() {
       usuario: usuario,
       actividadfisica: opcionActividadFisica,
       objetivo: opcionObjetivo,
+      ObjProteinas: ObjProteinas,
+      ObjCalorias: ObjCalorias,
     };
     axios.post("https://serverc-4y5e.onrender.com/modificar", values, { withCredentials: true })
       .then((res) => {
@@ -69,6 +71,9 @@ function Perfil() {
         setaltura(res.data.altura);
         setOpcionActividadFisica(res.data.actividadfisica);
         setopcionObjetivo(res.data.objetivo);
+        setObjProteinas(res.data.ObjProteinas);
+        setObjCalorias(res.data.ObjCalorias);
+        console.log("sesion", res.data);
       })
       .catch((err) => console.error(err));
     setGuardado(true);
