@@ -59,7 +59,7 @@ function Perfil() {
   }
   useEffect(() => {
     axios
-      .get("https://serverc-4y5e.onrender.com/getSession", { withCredentials: true }) //envia values a "servidor/registro"
+      .get("https://serverc-4y5e.onrender.com/getSession", { withCredentials: true }) 
       .then((res) => {
         setUsuario(res.data.usuario);
         setNombre(res.data.nombre);
