@@ -45,16 +45,16 @@ export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
   }
   ]);
 
-  const [pricetotal,setPricetotal]=useState(products.reduce((acc, product) => acc + product.price, 0));
+  const [pricetotal, setPricetotal] = useState(products.reduce((acc, product) => acc + product.price, 0));
 
   const handleRemove = (productToRemove) => {
-    setProducts((prev)=> prev = products.filter(product => product !== productToRemove)); //devuelve cada producto si no es igual al que hay que eliminar
+    setProducts((prev) => prev = products.filter(product => product !== productToRemove)); //devuelve cada producto si no es igual al que hay que eliminar
   };
 
   useEffect(() => {
-    const precio= products.reduce((acc, product) => acc + product.price, 0)
+    const precio = products.reduce((acc, product) => acc + product.price, 0)
     setPricetotal(precio)
-  },[products])
+  }, [products])
 
   useEffect(() => {
     setNumeroItems(products.length);
@@ -158,7 +158,7 @@ export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
                         <p>${pricetotal}</p>
                       </div>
                       <p className="tw-mt-0.5 tw-text-sm tw-text-gray-500">
-                        Gastos de envio + IVA incluidos 
+                        Gastos de envio + IVA incluidos
                       </p>
                       <div className="tw-mt-4">
                         <a

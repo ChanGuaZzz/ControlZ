@@ -64,15 +64,15 @@ const TablaRutina = () => {
         console.log("RUTINA BASE DE DATOS", resRutina)
         const datosRutina = resRutina.data[0];
         console.log(resRutina.data[0]);
-        if(datosRutina && datosRutina !== null && datosRutina !== '') {
-        setLunes(datosRutina.lunes);
-        setMartes(datosRutina.martes);
-        setMiercoles(datosRutina.miercoles);
-        setJueves(datosRutina.jueves);
-        setViernes(datosRutina.viernes);
-        setSabado(datosRutina.sabado);
-        setDomingo(datosRutina.domingo);
-      }
+        if (datosRutina && datosRutina !== null && datosRutina !== '') {
+          setLunes(datosRutina.lunes);
+          setMartes(datosRutina.martes);
+          setMiercoles(datosRutina.miercoles);
+          setJueves(datosRutina.jueves);
+          setViernes(datosRutina.viernes);
+          setSabado(datosRutina.sabado);
+          setDomingo(datosRutina.domingo);
+        }
       } catch (error) {
         console.error(error);
       }
@@ -194,7 +194,7 @@ const TablaRutina = () => {
             </svg>
           </button>
           <h1 className=" tw-text-2xl tw-font-semibold">
-            
+
             {nombredias[diaVisible]}
           </h1>
           <button
