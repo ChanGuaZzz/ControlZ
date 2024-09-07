@@ -52,6 +52,7 @@ function Perfil() {
     };
     axios.post("https://serverc-4y5e.onrender.com/modificar", values, { withCredentials: true })
       .then((res) => {
+        console.log(res.data);
       })
       .catch((err) => console.error(err));
 
