@@ -24,7 +24,7 @@ const Alimento = ({ producto, Horavalor, usuario, Fecha }) => {
 
 
     const addFood = () => {
-
+      console.log("addfood")
         axios.post('https://serverc-4y5e.onrender.com/AddAlimento', {
 
             nombre: producto.nombre,
@@ -58,7 +58,7 @@ const Alimento = ({ producto, Horavalor, usuario, Fecha }) => {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
                         {
-                            inputVisible && <AlimentoCantidadInput value={Cantidad} onChange={(e) => setCantidad(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') addFood() }} addFood={addFood} />}
+                            inputVisible && <AlimentoCantidadInput closeModal={toggleInput} value={Cantidad} onChange={(e) => setCantidad(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') addFood() }} addFood={addFood} />}
                     </h3>
                 </div>
                 <div className="tw-flex tw-gap-2 tw-items-center tw-justify-center tw-bg-gray-300 tw-cursor-pointer" onClick={toggleCaracteristicas}>
