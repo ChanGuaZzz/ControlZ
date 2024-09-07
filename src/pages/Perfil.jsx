@@ -419,7 +419,7 @@ function Perfil() {
                       <h1 className=" tw-flex tw-justify-center tw-text-blue-500  tw-text-center tw-w-1/3 tw-font-medium">{ObjCalorias}</h1>
                     )}
                   </div>
-                  {ObjCalorias && <button className="tw-rounded-md tw-w-auto" onClick={() => setIsEditing('edad')}><Pen /></button>}
+                  {ObjCalorias && (<button className="tw-rounded-md tw-w-auto" onClick={() => setIsEditing('ObjCalorias')}><Pen /></button>)}
                 </div>
 
                 <div className="tw-w-full tw-flex mb-1 ">
@@ -440,7 +440,7 @@ function Perfil() {
                     ) : (
                       <h1 className=" tw-flex tw-justify-center tw-text-blue-500  tw-text-center tw-w-1/3 tw-font-medium">{ObjProteinas}</h1>)}
                   </div>
-                  {ObjProteinas && <button className="tw-rounded-md tw-w-auto" onClick={() => setIsEditing('ObjProteinas')}><Pen /></button>}
+                  {ObjProteinas && (<button className="tw-rounded-md tw-w-auto" onClick={() => setIsEditing('ObjProteinas')}><Pen /></button>)}
                 </div>
               </div>
             </div>
