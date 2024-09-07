@@ -22,8 +22,12 @@ function Dieta() {
     withCredentials: true,
   }).then((res) => {
     setUsuario(res.data.usuario);
-    setObjProteinas(res.data.usuario.ObjProteinas);
-    setObjCalorias(res.data.usuario.ObjCalorias);
+    if (res.data.usuario.ObjProteinas) {
+      setObjProteinas(res.data.usuario.ObjProteinas);
+    }
+    if (res.data.usuario.ObjCalorias) {
+      setObjCalorias(res.data.usuario.ObjCalorias);
+    }
   }).catch((error) => {
     console.error(error);
   });
