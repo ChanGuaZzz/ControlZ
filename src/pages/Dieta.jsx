@@ -16,7 +16,7 @@ function Dieta() {
   const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
   const [Fecha, setFecha] = useState(formattedDate);
   const [ObjProteinas, setObjProteinas] = useState(100);
-  const [ObjCalorias, setObjCalorias] = useState(3000);
+  const [ObjCalorias, setObjCalorias] = useState(2100);
 
   axios.get("https://serverc-4y5e.onrender.com/getSession", {
     withCredentials: true,
