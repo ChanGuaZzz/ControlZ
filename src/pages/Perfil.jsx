@@ -409,7 +409,7 @@ function Perfil() {
                     {isEditing === 'ObjCalorias' ? (
                       <input className="tw-border tw-ps-1 tw-rounded-lg tw-border-blue-300 tw-w-1/3 " type="number" name="edad" placeholder="Años"
                         value={ObjCalorias}
-                        onInput={(e) => { setedad(e.target.value); }}
+                        onInput={(e) => { setObjCalorias(e.target.value); }}
                         onBlur={() => { ModificarDB(); setIsEditing(''); }}
                         onKeyDown={(e) => {
                           if (e.key === 'Enter') { ModificarDB(); setIsEditing(''); }
@@ -431,7 +431,7 @@ function Perfil() {
                     {isEditing === 'ObjProteinas' ? (
                       <input className="tw-border tw-ps-1 tw-rounded-lg tw-border-blue-300 tw-w-1/3 " type="number" name="ObjProteinas" placeholder="calorias"
                         value={ObjProteinas}
-                        onInput={(e) => { setObjCalorias(e.target.value); }}
+                        onInput={(e) => { setObjProteinas(e.target.value); }}
                         onBlur={() => { ModificarDB(); setIsEditing(''); }}
                         onKeyDown={(e) => {
                           if (e.key === 'Enter') { ModificarDB(); setIsEditing(''); }
