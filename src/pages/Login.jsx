@@ -3,6 +3,7 @@ import axios from "axios";
 import "../styles/index.css"
 import { act } from "react";
 import logoIcon from "../img/logoIcon.png";
+import Loading from "../components/Loading";
 
 function Login() {
 
@@ -68,6 +69,7 @@ function Login() {
   const [showErrorRegistro, setshowErrorRegistro] = useState(false);
   const [showMensajeInicio, setshowMensajeInicio] = useState(false);
   const [showMensajeNoExiste, setshowMensajeNoExiste] = useState(false);
+  const [showMensajeLoading, setshowMensajeLoading] = useState(false);
   const [animacion, setanimacion] = useState("");
 
 
@@ -208,6 +210,8 @@ function Login() {
   //mandamos a servidor/login los datos para trabajar con ellos
   const SumbitLogin = (event) => {
     event.preventDefault();
+    setshowMensajeLoading(true);
+    setshowMensajeNoExiste(false);
     axios
       .post(
         "https://serverc-4y5e.onrender.com/login",
@@ -219,7 +223,8 @@ function Login() {
           .get("https://serverc-4y5e.onrender.com/getSession", { withCredentials: true }) //envia values a "servidor/registro"
           .then((res) => {
           })
-          .catch((err) => console.error(err));
+          .catch((err) => console.error(err))
+          .finally(setshowMensajeLoading(false));
 
         if (res.data.redirectTo != undefined) {
           window.location.href = res.data.redirectTo;
@@ -474,7 +479,13 @@ function Login() {
                 >
                   Usuario inexistente
                 </p>
-
+                {showMensajeLoading && (
+                  <>
+                    <span className="position-absolute" style={{ left: 50, right: 50, marginTop: "5%" }}>
+                      <Loading />
+                    </span>
+                  </>
+                )}
                 <div className="">
                   <u
                     href=""
