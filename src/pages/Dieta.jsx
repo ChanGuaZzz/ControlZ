@@ -18,23 +18,24 @@ function Dieta() {
   const [ObjProteinas, setObjProteinas] = useState(100);
   const [ObjCalorias, setObjCalorias] = useState(2100);
 
-
-  axios.get("https://serverc-4y5e.onrender.com/getSession", {
-    withCredentials: true,
-  }).then((res) => {
-    if (res.data.usuario == null || res.data.usuario == undefined) {
-      return;
-    }
-    setUsuario(res.data.usuario);
-    if (res.data.usuario.ObjProteinas != undefined && res.data.usuario.ObjProteinas != null) {
-      setObjProteinas(res.data.usuario.ObjProteinas);
-    }
-    if (res.data.usuario.ObjProteinas != undefined && res.data.usuario.ObjProteinas != null) {
-      setObjCalorias(res.data.usuario.ObjCalorias);
-    }
-  }).catch((error) => {
-    console.error(error);
-  });
+  useEffect(() => {
+    axios.get("https://serverc-4y5e.onrender.com/getSession", {
+      withCredentials: true,
+    }).then((res) => {
+      if (res.data.usuario == null || res.data.usuario == undefined) {
+        return;
+      }
+      setUsuario(res.data.usuario);
+      if (res.data.usuario.ObjProteinas != undefined && res.data.usuario.ObjProteinas != null) {
+        setObjProteinas(res.data.usuario.ObjProteinas);
+      }
+      if (res.data.usuario.ObjProteinas != undefined && res.data.usuario.ObjProteinas != null) {
+        setObjCalorias(res.data.usuario.ObjCalorias);
+      }
+    }).catch((error) => {
+      console.error(error);
+    });
+  }, []);
 
   const [ShowFoodModal, SetShowFoodModal] = useState(false);
   //proteinas
@@ -173,21 +174,21 @@ function Dieta() {
               <div className="tw-w-full tw-justify-center tw-h-2/3 lg:tw-px-[10%]">
                 <div className="tw-flex tw-items-center  tw-w-full tw-h-full tw-justify-between  tw-pointer-events-none  tw-text-sm lg:tw-text-xs tw-px-3 md:tw-px-16 xl:tw-px-[20%] xl:tw-bg-[#292929] tw-rounded-xl">
                   <div className="tw-flex tw-flex-wrap tw-justify-center tw-w-1/5" >
-                    <p className="tw-w-full tw-flex tw-justify-center tw-font-bold lg:tw-text-lg"><span >{Math.round(CaloriasConsumed)}</span></p>
-                    <p className="tw-w-full tw-flex tw-justify-center lg:tw-text-lg"><span className="">Consumidas</span></p>
+                    <p className="tw-w-full tw-flex tw-justify-center tw-font-bold lg:tw-text-sm"><span >{Math.round(CaloriasConsumed)}</span></p>
+                    <p className="tw-w-full tw-flex tw-justify-center lg:tw-text-sm"><span className="">Consumidas</span></p>
                   </div>
                   <div className=" tw-w-2/5 tw-flex tw-items-center tw-justify-center tw-h-full">
                     <Grafica CaloriasConsumed={CaloriasConsumed} CaloriasObjetivo={ObjCalorias} />
                   </div>
                   <div className="tw-flex tw-flex-wrap tw-justify-center tw-w-1/5 " >
-                    <p className="tw-w-full tw-flex tw-justify-center tw-font-bold lg:tw-text-lg"><span>{ObjCalorias}</span></p>
-                    <p className="tw-w-full tw-flex tw-justify-center lg:tw-text-lg"><span className="">Objetivo</span></p>
+                    <p className="tw-w-full tw-flex tw-justify-center tw-font-bold lg:tw-text-sm"><span>{ObjCalorias}</span></p>
+                    <p className="tw-w-full tw-flex tw-justify-center lg:tw-text-sm"><span className="">Objetivo</span></p>
                   </div>
                 </div>
               </div>
               <div className="tw-w-full tw-flex tw-justify-center lg:tw-pr-[10%]">
                 <div className="tw-w-full tw-flex tw-items-center tw-justify-center tw-gap-2 ">
-                  <p className=" tw-text-sm sm:tw-text-base lg:tw-text-lg">Proteinas: {Math.round(proteinConsumed)}</p>
+                  <p className=" tw-text-sm sm:tw-text-base lg:tw-text-sm">Proteinas: {Math.round(proteinConsumed)}g</p>
                   <progress value={proteinConsumed} max={ObjProteinas} className="tw-h-2 tw-w-5/6"></progress>
                 </div>
               </div>
