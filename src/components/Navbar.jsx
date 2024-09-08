@@ -6,13 +6,13 @@ import AsistenteVirtual from "./AsistenteVirtual";
 import CarritoCompra from "./CarritoCompra";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import habilitarTailwind from "./habilitarTailwind";
 function Navbar({ linkHome }) {
   const [numeroItems, setNumeroItems] = useState(4);
   const [usuarioSession, setUsuarioSession] = useState("");
-
+  habilitarTailwind();
   useEffect(() => {
-    axios.get("https://serverc-4y5e.onrender.com/getSession", {
+    axios.get("http://localhost:8081/getSession", {
       withCredentials: true,
     }).then((res) => {
       setUsuarioSession(res.data.usuario);
@@ -23,6 +23,10 @@ function Navbar({ linkHome }) {
 
   }, []);
 
+  useEffect(() => {
+    console.log("usuarioSession: " + usuarioSession);
+  }, [usuarioSession]);
+
   const [visibleCesta, setVisibleCesta] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -31,7 +35,7 @@ function Navbar({ linkHome }) {
   };
 
   const cerrarSesion = () => {
-    axios.get("https://serverc-4y5e.onrender.com/logout", {
+    axios.get("http://localhost:8081/logout", {
       withCredentials: true,
     })
 
@@ -73,10 +77,10 @@ function Navbar({ linkHome }) {
               </svg>
 
             </div>
-            {typeof usuarioSession === 'string' && usuarioSession !== ''
+            {typeof usuarioSession === 'string' && usuarioSession !== '' && usuarioSession !== undefined && usuarioSession !== null
               ?
               <div onClick={cerrarSesion} className=" tw-w-7 tw-text-white tw-cursor-pointer  hoverGirar">
-                <svg className="   hoveraGirar tw-text-red-500 tw-pointer-events-none" xmlns="http://www.w3.org/2000/svg"
+                <svg className="   hoveraGirar tw-text-green-500 tw-pointer-events-none" xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 1024 1024"
                   fill="currentColor"
                   height="25px"
@@ -88,7 +92,7 @@ function Navbar({ linkHome }) {
               </div>
               :
               <a href="/login" className=" tw-w-7 tw-text-white tw-cursor-pointer  hoverGirar">
-                <svg className="hoveraGirar tw-text-green-500 tw-pointer-events-none" xmlns="http://www.w3.org/2000/svg"
+                <svg className="hoveraGirar tw-text-red-500 tw-pointer-events-none" xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 1024 1024"
                   fill="currentColor"
                   height="25px"

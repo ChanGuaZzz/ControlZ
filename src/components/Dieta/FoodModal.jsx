@@ -3,22 +3,20 @@ import axios from "axios";
 import Alimento from "./Alimento";
 import Loading from "../Loading";
 
-const FoodModal = ({ closeModal, Horavalor, usuario, Fecha }) => {
+const FoodModal = ({ closeModal, Horavalor, usuario, Fecha, update }) => {
   const [userInput, setUserInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [resultados, setResultados] = useState([]);
   const [page, setPage] = useState(0); // State to keep track of the current page
   const divRef = useRef(null);
   const [pagesEnabled, setPagesEnabled] = useState(false);
-
   // Fetch alimentos
   const fetchData = (page) => {
     console.log('page ', page);
-
     setLoading(true);
     axios.post(
-      "https://serverc-4y5e.onrender.com/obtenerAlimento",
-      { userInput: userInput, offset: page * 10 },
+      "http://localhost:8081/obtenerAlimento",
+      { userInput: userInput, offset: page * 10 }
     ).then(res => {
       console.log(res.data);
       setLoading(false);
@@ -101,7 +99,7 @@ const FoodModal = ({ closeModal, Horavalor, usuario, Fecha }) => {
               className=" tw-text-3xl"
               disabled={loading}
             >
-              {pagesEnabled ? '⬅️' : ''}
+              {pagesEnabled ? '➡️' : ''}
             </button>
           </div>
         )}
@@ -111,7 +109,7 @@ const FoodModal = ({ closeModal, Horavalor, usuario, Fecha }) => {
           )}
           {resultados && !loading && (
             resultados.map(producto => (
-              <Alimento key={producto.id} producto={producto} Horavalor={Horavalor} usuario={usuario} Fecha={Fecha} />
+              <Alimento key={producto.id} producto={producto} Horavalor={Horavalor} usuario={usuario} Fecha={Fecha} update={update} />
             ))
           )}
         </div>
