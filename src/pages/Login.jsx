@@ -460,10 +460,12 @@ function Login() {
                 </div>
                 <p
                   id="mensajeConstraseñaincorrectaInicio"
-                  className={`${animacion} text-danger position-absolute`}
+                  className={`${animacion} text-danger position-absolute mensajeslogin`}
                   style={{
                     display: showMensajeInicio ? "block" : "none",
                     height: "10px",
+                    marginTop: "25%",
+
                   }}
                 >
                   Constraseña Incorrecta
@@ -471,17 +473,18 @@ function Login() {
 
                 <p
                   id="mensajeConstraseñaincorrectaInicio"
-                  className={`${animacion} text-danger position-absolute`}
+                  className={`${animacion} text-danger position-absolute mensajeslogin`}
                   style={{
                     display: showMensajeNoExiste ? "block" : "none",
                     height: "10px",
+                    marginTop: "5vh",
                   }}
                 >
                   Usuario inexistente
                 </p>
                 {showMensajeLoading && (
                   <>
-                    <span className="position-absolute" style={{ left: 50, right: 50, marginTop: "5%" }}>
+                    <span className="position-absolute loading" style={{ left: 50, right: 50, marginTop: "2vh" }}>
                       <Loading />
                     </span>
                   </>
