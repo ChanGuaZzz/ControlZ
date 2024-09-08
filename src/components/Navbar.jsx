@@ -6,13 +6,13 @@ import AsistenteVirtual from "./AsistenteVirtual";
 import CarritoCompra from "./CarritoCompra";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import habilitarTailwind from "./habilitarTailwind";
+
 function Navbar({ linkHome }) {
   const [numeroItems, setNumeroItems] = useState(4);
   const [usuarioSession, setUsuarioSession] = useState("");
-  habilitarTailwind();
+  
   useEffect(() => {
-    axios.get("http://localhost:8081/getSession", {
+    axios.get("https://serverc-4y5e.onrender.com/getSession", {
       withCredentials: true,
     }).then((res) => {
       setUsuarioSession(res.data.usuario);
@@ -35,7 +35,7 @@ function Navbar({ linkHome }) {
   };
 
   const cerrarSesion = () => {
-    axios.get("http://localhost:8081/logout", {
+    axios.get("https://serverc-4y5e.onrender.com/logout", {
       withCredentials: true,
     })
 
