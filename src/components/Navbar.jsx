@@ -10,13 +10,12 @@ import axios from "axios";
 function Navbar({ linkHome }) {
   const [numeroItems, setNumeroItems] = useState(4);
   const [usuarioSession, setUsuarioSession] = useState("");
-  
+
   useEffect(() => {
     axios.get("https://serverc-4y5e.onrender.com/getSession", {
       withCredentials: true,
     }).then((res) => {
       setUsuarioSession(res.data.usuario);
-      console.log("usuario: " + res.data.usuario);
     }).catch((error) => {
       console.error(error);
     });
@@ -24,7 +23,6 @@ function Navbar({ linkHome }) {
   }, []);
 
   useEffect(() => {
-    console.log("usuarioSession: " + usuarioSession);
   }, [usuarioSession]);
 
   const [visibleCesta, setVisibleCesta] = useState(false);
@@ -40,7 +38,6 @@ function Navbar({ linkHome }) {
     })
 
     window.location.href = "/login";
-    console.log("Sesión cerrada exitosamentessssssss");
 
   }
   return (

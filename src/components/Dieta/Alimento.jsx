@@ -18,7 +18,6 @@ const Alimento = ({ producto, Horavalor, usuario, Fecha, update }) => {
 
 
   const addFood = () => {
-    console.log("addFood")
     axios.post('https://serverc-4y5e.onrender.com/AddAlimento', {
 
       nombre: producto.nombre,
@@ -35,7 +34,6 @@ const Alimento = ({ producto, Horavalor, usuario, Fecha, update }) => {
       Fecha: Fecha
     })
       .then((response) => {
-        console.log("alimento añadido:", response);
       }).catch((error) => {
         console.error("Error al añadir alimento:", error);
       });

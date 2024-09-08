@@ -180,28 +180,20 @@ function Login() {
     axios
       .post("https://serverc-4y5e.onrender.com/registro", values) //envia values a "servidor/registro"
       .then((res) => {
-        console.log(res);
       })
       .catch((err) => console.error(err));
   };
 
   const ComprobarReg = (event) => {
-    console.log("loqesea");
     event.preventDefault();
 
     axios
       .post("https://serverc-4y5e.onrender.com/existeregistro", values) //envia values a "servidor/registro"
       .then((ccc) => {
-        console.log(ccc);
-
-        console.log(ccc.status);
 
         if (ccc.status == 200) {
           cambiarDisplayRegistro2();
-          console.log("entro al 200");
         } else {
-          console.log("entro al 201");
-
           setshowErrorRegistro(true);
           setShowMensaje1(false);
           setShowMensajeCompletar(false);
@@ -226,11 +218,9 @@ function Login() {
         axios
           .get("https://serverc-4y5e.onrender.com/getSession", { withCredentials: true }) //envia values a "servidor/registro"
           .then((res) => {
-            console.log(res);
           })
           .catch((err) => console.error(err));
 
-        console.log(res);
         if (res.data.redirectTo != undefined) {
           window.location.href = res.data.redirectTo;
         } else if (
@@ -248,7 +238,6 @@ function Login() {
           }
 
         } else {
-          console.log("entro al 201");
           setshowMensajeInicio(false);
 
           if (!showMensajeNoExiste) {

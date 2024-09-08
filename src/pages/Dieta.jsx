@@ -19,10 +19,9 @@ function Dieta() {
   const [Loading, setLoading] = useState(false);
 
   useEffect(() => {
-    axios.get("https://serverc-4y5e.onrender.com/getSession", {
+    axios.get("http://localhost:8081/getSession", {
       withCredentials: true,
     }).then((res) => {
-      console.log(res.data);
       if (res.data.usuario == null || res.data.usuario == undefined) {
         return;
       }
@@ -185,9 +184,7 @@ function Dieta() {
     const formattedDatee = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
     setFecha(formattedDatee);
   }
-  useEffect(() => {
-    console.log(Loading);
-  }, [Loading]);
+
   return (
     <>
       {Loading && (

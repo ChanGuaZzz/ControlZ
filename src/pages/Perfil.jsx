@@ -50,10 +50,8 @@ function Perfil() {
       ObjCalorias: ObjCalorias,
       ObjProteinas: ObjProteinas,
     };
-    console.log("values enviados desde FRONT", values);
     axios.post("https://serverc-4y5e.onrender.com/modificar", values, { withCredentials: true })
       .then((res) => {
-        console.log(res.data);
       })
       .catch((err) => console.error(err));
 
@@ -75,7 +73,6 @@ function Perfil() {
         setopcionObjetivo(res.data.objetivo);
         setObjProteinas(res.data.ObjProteinas);
         setObjCalorias(res.data.ObjCalorias);
-        console.log("sesion", res.data);
       })
       .catch((err) => console.error(err));
     setGuardado(true);
