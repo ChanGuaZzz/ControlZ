@@ -143,7 +143,7 @@ function Dieta() {
         // Introduce a delay of 200ms before setting loading to false
         setTimeout(() => {
           setLoading(false);
-        }, 200);
+        }, 1400);
 
       }, 200);
     }, 200);
