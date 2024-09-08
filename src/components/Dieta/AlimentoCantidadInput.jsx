@@ -19,9 +19,9 @@ const AlimentoCantidadInput = ({ value, onChange, addFood, closeModal, nombre, u
             onChange={onChange}
             placeholder="gramos"
             className="tw-flex-1 tw-border-none tw-outline-none tw-text-base no-spinners"
-            onKeyDown={(e) => { if (e.key === 'Enter' && value != 0 && value != undefined && value != null) { addFood(); closeModal() } }}
+            onKeyDown={(e) => { if (e.key === 'Enter' && value != 0 && value != undefined && value != null) { addFood(); closeModal(); update() } }}
           />
-          <svg onClick={() => { if (value != 0 && value != undefined && value != null) addFood(); closeModal(); update(1) }} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="tw-w-[30px] tw-h-[30px] tw-cursor-pointer hover:tw-fill-gray-500">
+          <svg onClick={() => { if (value != 0 && value != undefined && value != null) addFood(); closeModal(); update() }} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="tw-w-[30px] tw-h-[30px] tw-cursor-pointer hover:tw-fill-gray-500">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
           </svg>
         </div>
