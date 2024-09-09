@@ -519,7 +519,7 @@ function Login() {
                   <>
                     <span
                       className="position-absolute loading"
-                      style={{ left: 50, right: 50, marginTop: "4vh" }}
+                      style={{ left: 50, right: 50, marginTop: "2%" }}
                     >
                       <Loading />
                     </span>
@@ -529,7 +529,7 @@ function Login() {
                         className={`${animacion} text-danger position-absolute mensajeslogin`}
                         style={{
                           height: "10px",
-                          marginTop: "20vh",
+                          marginTop: "19%",
                         }}
                       >
                         Puede tardar unos segundos...
