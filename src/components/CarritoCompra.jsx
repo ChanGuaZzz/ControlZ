@@ -34,7 +34,7 @@ export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
   // }, [products])
 
   useEffect(() => {
-    // setNumeroItems(products.length);
+    setNumeroItems(products.length);
   }, [products]);
 
   return (

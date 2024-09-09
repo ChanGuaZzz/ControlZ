@@ -5,7 +5,7 @@ function Producto({ img, onClick, nombre, descripcion, precio, precioScam, descu
  
  const addToCart = () => { 
     axios.post("https://serverc-4y5e.onrender.com/addToCart", {
-      product: {
+      producto: {
       id: nombre,
       name: nombre,
       quantity: 1 ,
