@@ -4,12 +4,10 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 import proteinaPolvo from "../img/proteinaPolvo.png"
 import barraProteina from "../img/barraProteina.png"
 import axios from "axios";
-import io from 'socket.io-client';
 
 export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
 
   const [products, setProducts] = useState([]);
-  const socket = io('https://serverc-4y5e.onrender.com');
 
   useEffect(() => {
     axios.get("https://serverc-4y5e.onrender.com/getSession", {
@@ -20,18 +18,9 @@ export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
       console.error(error);
     });
 
-    // Escuchar cambios en la sesión
-    socket.on('sessionChanged', (newSession) => {
-      console.log('Sesión actualizada', newSession);
-      setProducts(newSession.carrito || []);
-    });
-
-    // Limpiar el efecto al desmontar el componente
-    return () => {
-      socket.disconnect();
-    };
   }, []);
 
+  
 
   // const [pricetotal, setPricetotal] = useState(products.reduce((acc, product) => acc + product.price, 0));
 
