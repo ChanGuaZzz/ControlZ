@@ -22,6 +22,7 @@ export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
 
     // Escuchar cambios en la sesión
     socket.on('sessionChanged', (newSession) => {
+      console.log('Sesión actualizada', newSession);
       setProducts(newSession.carrito || []);
     });
 
