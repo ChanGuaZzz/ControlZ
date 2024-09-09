@@ -22,16 +22,16 @@ export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
 
   
 
-  const [pricetotal, setPricetotal] = useState(products.reduce((acc, product) => acc + product.price, 0));
+  // const [pricetotal, setPricetotal] = useState(products.reduce((acc, product) => acc + product.price, 0));
 
   const handleRemove = (productToRemove) => {
     setProducts((prev) => prev = products.filter(product => product !== productToRemove)); //devuelve cada producto si no es igual al que hay que eliminar
   };
 
-  useEffect(() => {
-    const precio = products.reduce((acc, product) => acc + product.price, 0)
-    setPricetotal(precio)
-  }, [products])
+  // useEffect(() => {
+  //   const precio = products.reduce((acc, product) => acc + product.price, 0)
+  //   setPricetotal(precio)
+  // }, [products])
 
   useEffect(() => {
     setNumeroItems(products.length);
