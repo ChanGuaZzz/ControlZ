@@ -87,7 +87,7 @@ export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
                       <div className="">
                         <div className="tw-flow-root">
                           <ul role="list" className=" tw-divide-y tw-divide-gray-200">
-                            {products>0 && products.map((product) => (
+                            {products.length >0 ? products.map((product) => (
                               <li key={product.id} className="tw-flex tw-py-4"> {/*cambio*/}
                                 <div className=" tw-w-[38%] tw-flex-shrink-0 tw-overflow-hidden tw-rounded-md tw-border tw-border-gray-200">
                                   <img
@@ -122,7 +122,8 @@ export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
                                   </div>
                                 </div>
                               </li>
-                            ))}
+                            ))
+                          : <p>No hay productos en el carrito</p>}
                           </ul>
                         </div>
                       </div>
