@@ -101,7 +101,7 @@ const FoodModal = ({ closeModal, Horavalor, usuario, Fecha, update }) => {
             </button>
           </div>
         )}
-        <div id='resultContainer' className="tw-flex tw-h-full tw-flex-wrap tw-text-black tw-gap-1 tw-w-full tw-justify-center tw-mt-3">
+          <div id='resultContainer' className="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-4 tw-h-full tw-text-black tw-w-full tw-justify-center tw-mt-3">
           {loading && (
             <Loading />
           )}
