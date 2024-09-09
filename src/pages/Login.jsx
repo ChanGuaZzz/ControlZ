@@ -115,14 +115,6 @@ function Login() {
         setShowMensaje2(false);
       }
     }
-  }, [values.password, values.password2]);
-
-  const validarEmail = (email) => {
-    const expresion = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return expresion.test(String(email).toLowerCase());
-  };
-
-  useEffect(() => {
     if (values.email) {
       if (!validarEmail(values.email)) {
         setShowMensajeCompletar(false);
@@ -134,7 +126,13 @@ function Login() {
         setShowMensajeEmail(false);
       }
     }
-  }, [values.email]);
+  }, [values.password, values.password2, values.email]);
+
+
+  const validarEmail = (email) => {
+    const expresion = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return expresion.test(String(email).toLowerCase());
+  };
 
   const cambiarDisplayRegistro2 = (e) => {
     if (values.usuario && values.email && values.password && values.password2) {
