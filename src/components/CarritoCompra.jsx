@@ -13,7 +13,7 @@ export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
     axios.get("https://serverc-4y5e.onrender.com/getSession", {
       withCredentials: true,
     }).then((res) => {
-    setProducts(res.data.carrito);
+    setProducts(res.data.carrito || []);
     }).catch((error) => {
       console.error(error);
     });
@@ -34,7 +34,7 @@ export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
   // }, [products])
 
   useEffect(() => {
-    products.length === 0 ? setNumeroItems(0) :
+    products.length > 0 &&
     setNumeroItems(products.length);
   }, [products]);
 
