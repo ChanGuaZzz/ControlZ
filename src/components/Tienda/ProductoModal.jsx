@@ -15,7 +15,7 @@ const ProductoModal = ({ product, closeModal }) => {
           <div className='tw-flex tw-justify-between tw-items-center tw-w-full tw-h-1/6'>
             <h2 className="tw-text-lg  tw-font-bold sm:tw-text-2xl ">{product.nombre}</h2>
             <p className="tw-flex tw-justify-center tw-items-center tw-text-lg sm:tw-text-lg ">
-              <span>{product.precio}</span>
+              <span>{product.precio}€</span>
             </p>
           </div>
           <p className="ModalDescText tw-mt-2 tw-flex tw-items-center tw-justify-center tw-h-3/6 sm:tw-text-lg md:tw-text-lg">

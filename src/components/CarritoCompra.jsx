@@ -103,7 +103,7 @@ export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
                                       <h3>
                                         <a href={"/tienda"}>{product.name}</a>
                                       </h3>
-                                      <p className="tw-ml-4">${product.price}.00</p>
+                                      <p className="tw-ml-4">${product.price}€</p>
                                     </div>
                                   </div>
                                   <div className="tw-flex tw-flex-1 tw-items-end tw-justify-between tw-text-sm">
