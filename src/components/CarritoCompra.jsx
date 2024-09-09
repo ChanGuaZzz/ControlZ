@@ -3,47 +3,24 @@ import { Dialog, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import proteinaPolvo from "../img/proteinaPolvo.png"
 import barraProteina from "../img/barraProteina.png"
+import axios from "axios";
 
 export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
-  const [products, setProducts] = useState([{
-    id: 1,
-    name: 'Proteina en polvo',
-    href: '#',
-    color: 'cacao',
-    price: 20,
-    quantity: 1,
-    imageSrc: proteinaPolvo,
-  },
-  {
-    id: 2,
-    name: 'SuperZapas',
-    href: '#',
-    color: 'Azul',
-    price: 15,
-    quantity: 1,
-    imageSrc: 'https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
 
-  },
-  {
-    id: 3,
-    name: 'Barrita proteica',
-    href: '#',
-    color: 'leche',
-    price: 20,
-    quantity: 2,
-    imageSrc: barraProteina,
-  },
-  {
-    id: 4,
-    name: 'SuperZapas',
-    href: '#',
-    color: 'Azul',
-    price: 15,
-    quantity: 1,
-    imageSrc: 'https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+  const [products, setProducts] = useState([]);
 
-  }
-  ]);
+  useEffect(() => {
+    axios.get("https://serverc-4y5e.onrender.com/getSession", {
+      withCredentials: true,
+    }).then((res) => {
+    setProducts(res.data.carrito);
+    }).catch((error) => {
+      console.error(error);
+    });
+
+  }, []);
+
+  
 
   const [pricetotal, setPricetotal] = useState(products.reduce((acc, product) => acc + product.price, 0));
 
@@ -128,7 +105,6 @@ export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
                                       </h3>
                                       <p className="tw-ml-4">${product.price}.00</p>
                                     </div>
-                                    <p className="tw-mt-1 tw-text-sm tw-text-gray-500">{product.color}</p>
                                   </div>
                                   <div className="tw-flex tw-flex-1 tw-items-end tw-justify-between tw-text-sm">
                                     <p className="tw-text-gray-500">Cantidad: {product.quantity}</p>

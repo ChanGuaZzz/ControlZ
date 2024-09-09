@@ -46,7 +46,7 @@ function Tienda() {
 
         <div className="tw-p-2 tw-mb-8 tw-flex tw-flex-wrap tw-gap-4 tw-mt-1 tw-justify-center sm:tw-mx-4"> {/* tw-grid md:tw-grid-cols-3 xl:tw-grid-cols-4*/}
 
-          <Producto img={proteinaPolvo} onClick={() => AbrirModal({
+          <Producto img={'https://controlz.onrender.com/assets/proteinaPolvo-CgX7OS6x.png'} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
             descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!",
             precio: "20€",
@@ -57,7 +57,7 @@ function Tienda() {
             nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!"} precio={"20€"} precioScam={"25€"} descuento={"20%"}
 
           />
-          <Producto img={barraProteina} onClick={() => AbrirModal({
+          <Producto img={"https://controlz.onrender.com/assets/barraProteina-DJXUMzq4.png"} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
             descripcion: "Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra.",
             precio: "20€",
@@ -67,7 +67,7 @@ function Tienda() {
           })}
             nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra."} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
-          <Producto img={proteinaPolvo} onClick={() => AbrirModal({
+          <Producto img={'https://controlz.onrender.com/assets/proteinaPolvo-CgX7OS6x.png'} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
             descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! ",
             precio: "20€",
@@ -77,7 +77,7 @@ function Tienda() {
           })}
             nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!"} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
-          <Producto img={barraProteina} onClick={() => AbrirModal({
+          <Producto img={"https://controlz.onrender.com/assets/barraProteina-DJXUMzq4.png"} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
             descripcion: "Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra.",
             precio: "20",
@@ -88,7 +88,7 @@ function Tienda() {
           })}
             nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra."} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
-          <Producto img={barraProteina} onClick={() => AbrirModal({
+          <Producto img={"https://controlz.onrender.com/assets/barraProteina-DJXUMzq4.png"} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
             descripcion: "Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra.",
             precio: "20€",
@@ -98,7 +98,7 @@ function Tienda() {
           })}
             nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra."} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
-          <Producto img={proteinaPolvo} onClick={() => AbrirModal({
+          <Producto img={'https://controlz.onrender.com/assets/proteinaPolvo-CgX7OS6x.png'} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
             descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!. ",
             precio: "20€",
@@ -108,7 +108,7 @@ function Tienda() {
           })}
             nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
-          <Producto img={barraProteina} onClick={() => AbrirModal({
+          <Producto img={"https://controlz.onrender.com/assets/barraProteina-DJXUMzq4.png"} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
             descripcion: "Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. ",
             precio: "20€",
@@ -118,7 +118,7 @@ function Tienda() {
           })}
             nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
-          <Producto img={proteinaPolvo} onClick={() => AbrirModal({
+          <Producto img={'https://controlz.onrender.com/assets/proteinaPolvo-CgX7OS6x.png'} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
             descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! ",
             precio: "20€",
@@ -128,7 +128,7 @@ function Tienda() {
           })}
             nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!"} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
-          <Producto img={barraProteina} onClick={() => AbrirModal({
+          <Producto img={"https://controlz.onrender.com/assets/barraProteina-DJXUMzq4.png"} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
             descripcion: "Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. ",
             precio: "20€",
@@ -138,7 +138,7 @@ function Tienda() {
           })}
             nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
-          <Producto img={proteinaPolvo} onClick={() => AbrirModal({
+          <Producto img={'https://controlz.onrender.com/assets/proteinaPolvo-CgX7OS6x.png'} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
             descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!  ",
             precio: "20€",
@@ -148,7 +148,7 @@ function Tienda() {
           })}
             nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
-          <Producto img={barraProteina} onClick={() => AbrirModal({
+          <Producto img={"https://controlz.onrender.com/assets/barraProteina-DJXUMzq4.png"} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
             descripcion: "Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. ",
             precio: "20€",
@@ -158,7 +158,7 @@ function Tienda() {
           })}
             nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. "} precio={"20€"} precioScam={"25€"} descuento={"20%"}
           />
-          <Producto img={proteinaPolvo} onClick={() => AbrirModal({
+          <Producto img={'https://controlz.onrender.com/assets/proteinaPolvo-CgX7OS6x.png'} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
             descripcion: "¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! ",
             precio: "20€",
