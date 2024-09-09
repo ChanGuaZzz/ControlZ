@@ -183,7 +183,6 @@
   justify-content: center;
   align-items: center;
   z-index: 9999999;
-
 }
 
 #logo {
@@ -474,4 +473,22 @@
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background-color: #555; /* Adjust the hover color as needed */
+}
+
+@media (max-width: 550px) {
+  .hide-on-small-screen {
+    display: none;
+  }
+}
+#logearse {
+  height: 75vh;
+}
+@media (max-width: 550px) {
+  .mensajeslogin {
+    margin-top: 14vh !important;
+  }
+  .loading
+  {
+    margin-top: 18vh !important;
+  }
 }
