@@ -55,8 +55,7 @@ const Alimento = ({ producto, Horavalor, usuario, Fecha, update }) => {
         </div>
         <div className="tw-flex tw-gap-2 tw-items-center tw-justify-center tw-bg-gray-300 tw-cursor-pointer" onMouseEnter={() => setCaracteristicasVisibles(true)} onMouseLeave={() => setCaracteristicasVisibles(false)}>
           {!caracteristicasVisibles && (
-
-            <div className="tw-h-[12rem]">
+            <div className="tw-h-[12rem]" onClick={setCaracteristicasVisibles(true)}>
               <img className="tw-w-full tw-h-full tw-max-h-80 tw-rounded-md" src={producto.imagenUrl !== "URL de imagen no disponible" ? producto.imagenUrl : notAviable} alt="Imagen del producto" />
             </div>
           )}
