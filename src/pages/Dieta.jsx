@@ -19,7 +19,7 @@ function Dieta() {
   const [Loading, setLoading] = useState(false);
 
   useEffect(() => {
-    axios.get("https://serverc-4y5e.onrender.com/getSession", {
+    axios.get("https://controlz.onrender.com/api/getSession", {
       withCredentials: true,
     }).then((res) => {
       if (res.data.usuario == null || res.data.usuario == undefined) {
