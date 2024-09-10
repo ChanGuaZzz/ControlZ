@@ -1,13 +1,20 @@
 import React from 'react';
 import Close from './Tienda/Close';
 
-const LoginRequiredModal = () => {
+const LoginRequiredModal = ({href, close, setShowLoginRequiredModal}) => {
+  const handleCloseClick = (e) => {
+    if (close) {
+      e.preventDefault();
+      setShowLoginRequiredModal(false);
+    }
+  };
+
   return (
     <>
       <div className="tw-fixed tw-top-0 tw-z-10 tw-text-black tw-left-0 tw-w-screen tw-h-screen NegroOpacidad75 tw-flex tw-items-center tw-justify-center">
 
         <div className=" tw-flex  tw-flex-col tw-items-center tw-bg-slate-200  tw-mx-2 tw-p-8 tw-rounded-lg tw-w-full tw-h-4/6 md:tw-w-4/5 lg:tw-w-3/5 tw-opacity-100 ">
-          <div className='tw-mb-[5%] tw-w-full tw-flex tw-justify-end  '><a href='/'> <Close></Close> </a></div>
+          <div className='tw-mb-[5%] tw-w-full tw-flex tw-justify-end  '><a href={href} onClick={handleCloseClick}> <Close></Close> </a></div>
           <svg
             className='  tw-pointer-events-none tw-text-gray-700 tw-dark:text-red-300'
             viewBox="0 0 24 24"
