@@ -261,11 +261,17 @@ function Login() {
   };
 
   useEffect(() => {
+    console.log('useEffect triggered with showMensajeLoading:', showMensajeLoading);
+
     const timer = setTimeout(() => {
+      console.log('Timeout completed, setting showMensajeTardar to true');
       setshowMensajeTardar(true);
     }, 15000);
 
-    return () => clearTimeout(timer); // Limpia el timeout anterior si `showMensajeLoading` cambia
+    return () => {
+      console.log('Cleaning up timeout');
+      clearTimeout(timer);
+    };
   }, [showMensajeLoading]);
 
   return (
