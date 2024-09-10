@@ -149,7 +149,7 @@ export default function CarritoCompra({refreshsession, visible, onClose, setNume
                     <div className="tw-border-t alturaResp tw-border-gray-200 tw-px-4 tw-py-6">
                       <div className="tw-flex tw-justify-between tw-text-base tw-font-medium tw-text-gray-900">
                         <p>Total</p>
-                        {/* <p>${pricetotal}</p> */}
+                        <p>${pricetotal}</p>
                       </div>
                       <p className="tw-mt-0.5 tw-text-sm tw-text-gray-500">
                         Gastos de envio + IVA incluidos
