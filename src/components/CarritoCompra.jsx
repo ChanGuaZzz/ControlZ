@@ -5,11 +5,11 @@ import proteinaPolvo from "../img/proteinaPolvo.png"
 import barraProteina from "../img/barraProteina.png"
 import axios from "axios";
 
-export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
+export default function CarritoCompra({refreshsession, visible, onClose, setNumeroItems }) {
 
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
+  const sessions= () => {
     axios.get("https://serverc-4y5e.onrender.com/getSession", {
       withCredentials: true,
     }).then((res) => {
@@ -17,8 +17,23 @@ export default function CarritoCompra({ visible, onClose, setNumeroItems }) {
     }).catch((error) => {
       console.error(error);
     });
+  }
 
+  if(refreshsession){
+    
+  useEffect(() => {
+
+    sessions();
+    
+
+  }, [refreshsession]);
+}
+
+  useEffect(() => {
+    sessions();
   }, []);
+
+
 
   
 

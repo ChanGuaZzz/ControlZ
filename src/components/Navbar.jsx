@@ -7,7 +7,7 @@ import CarritoCompra from "./CarritoCompra";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-function Navbar({ linkHome }) {
+function Navbar({ linkHome , refreshsession}) {
   const [numeroItems, setNumeroItems] = useState(4);
   const [usuarioSession, setUsuarioSession] = useState("");
 
@@ -132,7 +132,11 @@ function Navbar({ linkHome }) {
         </div>
         <div className="tw-absolute "></div>
         {/* Renderizar cesta */}
+        {refreshsession !== undefined ?
+        <CarritoCompra refreshsession={refreshsession} visible={visibleCesta} onClose={() => setVisibleCesta(false)} setNumeroItems={setNumeroItems} />
+        : 
         <CarritoCompra visible={visibleCesta} onClose={() => setVisibleCesta(false)} setNumeroItems={setNumeroItems} />
+        }
       </nav>
       {!visibleCesta && (
         <AsistenteVirtual />

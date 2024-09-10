@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import axios from "axios";
 
-function Producto({ img, onClick, nombre, descripcion, precio, precioScam, descuento }) {
+function Producto({refreshsession, setrefreshsession, img, onClick, nombre, descripcion, precio, precioScam, descuento }) {
  
  const addToCart = () => { 
     axios.post("https://serverc-4y5e.onrender.com/addToCart", {
@@ -16,6 +16,7 @@ function Producto({ img, onClick, nombre, descripcion, precio, precioScam, descu
       withCredentials: true
     }).then((res) => {
       console.log(res.data);
+      ()=>{setrefreshsession}
     }).catch((error) => {
       console.error(error);
     });
