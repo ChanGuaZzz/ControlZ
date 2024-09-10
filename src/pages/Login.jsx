@@ -176,28 +176,21 @@ function Login() {
     axios
       .post("https://serverc-4y5e.onrender.com/registro", values) //envia values a "servidor/registro"
       .then((res) => {
-        console.log(res);
       })
       .catch((err) => console.error(err));
   };
 
   const ComprobarReg = (event) => {
-    console.log("loqesea");
     event.preventDefault();
 
     axios
       .post("https://serverc-4y5e.onrender.com/existeregistro", values) //envia values a "servidor/registro"
       .then((ccc) => {
-        console.log(ccc);
 
-        console.log(ccc.status);
 
         if (ccc.status == 200) {
           cambiarDisplayRegistro2();
-          console.log("entro al 200");
         } else {
-          console.log("entro al 201");
-
           setshowErrorRegistro(true);
           setShowMensaje1(false);
           setShowMensajeCompletar(false);
@@ -213,7 +206,6 @@ function Login() {
     event.preventDefault();
     setshowMensajeLoading(true);
     setTimeout(() => {
-      console.log('Timeout completed, setting showMensajeTardar to true');
       setshowMensajeTardar(true);
     }, 15000);
 
@@ -228,12 +220,10 @@ function Login() {
         axios
           .get("https://serverc-4y5e.onrender.com/getSession", { withCredentials: true }) //envia values a "servidor/registro"
           .then((res) => {
-            console.log(res);
           })
           .catch((err) => console.error(err))
           .finally(setshowMensajeLoading(false));
 
-        console.log(res);
         if (res.data.redirectTo != undefined) {
           window.location.href = res.data.redirectTo;
         } else if (
@@ -249,7 +239,6 @@ function Login() {
             }, 1000);
           }
         } else {
-          console.log("entro al 201");
           setshowMensajeInicio(false);
 
           if (!showMensajeNoExiste) {
@@ -262,19 +251,8 @@ function Login() {
           }
         }
       })
-      .catch((err) => console.log(err));
   };
 
-  useEffect(() => {
-    console.log('useEffect triggered with showMensajeLoading:', showMensajeLoading);
-
-   
-
-    return () => {
-      console.log('Cleaning up timeout');
-      clearTimeout(timer);
-    };
-  }, [showMensajeLoading]);
 
   return (
     <div className="fondoindex tw-h-screen tw-w-full ">

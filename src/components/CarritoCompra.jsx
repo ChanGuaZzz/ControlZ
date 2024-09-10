@@ -25,14 +25,12 @@ export default function CarritoCompra({ refreshsession, visible, onClose, setNum
   useEffect(() => {
 
     sessions();
-    console.log("refreshsession existe")
 
 
   }, [refreshsession]);
 
   useEffect(() => {
     sessions();
-    console.log(refreshsession)
   }, []);
 
 
