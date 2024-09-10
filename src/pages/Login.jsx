@@ -261,9 +261,11 @@ function Login() {
   };
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setshowMensajeTardar(true);
     }, 15000);
+
+    return () => clearTimeout(timer); // Limpia el timeout anterior si `showMensajeLoading` cambia
   }, [showMensajeLoading]);
 
   return (
@@ -532,7 +534,7 @@ function Login() {
                           marginTop: "17%",
                         }}
                       >
-                        Puede tardar unos segundos...
+                        Espera unos segundos...
                       </p>
                     )}
                   </>
