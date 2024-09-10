@@ -4,6 +4,7 @@ import axios from "axios";
 function Producto({refreshsession, setrefreshsession, img, onClick, nombre, descripcion, precio, precioScam, descuento }) {
  
  const addToCart = () => { 
+  //if !session -> setModalSessionTrue()
     axios.post("https://serverc-4y5e.onrender.com/addToCart", {
       producto: {
       id: nombre,

@@ -5,14 +5,14 @@ import ProductoModal from "../components/Tienda/ProductoModal";
 import proteinaPolvo from "../img/proteinaPolvo.png"
 import barraProteina from "../img/barraProteina.png"
 import { useState, useEffect } from "react";
-
+import LoginRequiredModal from "../components/LoginRequiredModal";
 
 function Tienda() {
-
 
   const [ModalAbierto, setModalAbierto] = useState(false);
   const [ProductoSeleccionado, setProductoSeleccionado] = useState(null);
   const [refreshsession, setRefreshSession] = useState(false);
+  const [ShowLoginRequiredModal, setShowLoginRequiredModal] = useState(true); 
 
   const AbrirModal = (product) => {
     setProductoSeleccionado(product);
@@ -42,6 +42,9 @@ function Tienda() {
 
   return (
     <>
+
+    {ShowLoginRequiredModal &&  <LoginRequiredModal href={"#"} close={true} setShowLoginRequiredModal={setShowLoginRequiredModal} />}
+   
       <div className="tw-min-h-screen tw-pt-[4.87rem] tw-bg-gradient-to-b tw-from-[#292929] tw-to-[#0d0d0d] tw-to-60%" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont' }}>
         <Navbar linkHome={"/"} refreshsession={refreshsession} />
 
