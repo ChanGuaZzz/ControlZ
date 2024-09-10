@@ -49,7 +49,15 @@ export default function CarritoCompra({ refreshsession, visible, onClose, setNum
 
 
   const handleRemove = (productToRemove) => {
-    setProducts((prev) => prev = products.filter(product => product !== productToRemove)); //devuelve cada producto si no es igual al que hay que eliminar
+    axios.post("https://serverc-4y5e.onrender.com/removeToCart", {
+      producto: productToRemove,
+    }, {
+      withCredentials: true,
+    }).then((res) => {
+      sessions();
+    }).catch((error) => {
+      console.error(error);
+    });
   };
 
 
