@@ -212,6 +212,11 @@ function Login() {
   const SumbitLogin = (event) => {
     event.preventDefault();
     setshowMensajeLoading(true);
+    setTimeout(() => {
+      console.log('Timeout completed, setting showMensajeTardar to true');
+      setshowMensajeTardar(true);
+    }, 15000);
+
     setshowMensajeNoExiste(false);
     axios
       .post(
@@ -263,10 +268,7 @@ function Login() {
   useEffect(() => {
     console.log('useEffect triggered with showMensajeLoading:', showMensajeLoading);
 
-    const timer = setTimeout(() => {
-      console.log('Timeout completed, setting showMensajeTardar to true');
-      setshowMensajeTardar(true);
-    }, 15000);
+   
 
     return () => {
       console.log('Cleaning up timeout');
