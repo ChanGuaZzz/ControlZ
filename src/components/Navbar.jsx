@@ -12,7 +12,7 @@ function Navbar({ linkHome , refreshsession}) {
   const [usuarioSession, setUsuarioSession] = useState("");
 
   useEffect(() => {
-    axios.get("https://controlz.onrender.com/api/getSession", {
+    axios.get("https://serverc-4y5e.onrender.com/getSession", {
       withCredentials: true,
     }).then((res) => {
       setUsuarioSession(res.data.usuario);
@@ -33,7 +33,7 @@ function Navbar({ linkHome , refreshsession}) {
   };
 
   const cerrarSesion = () => {
-    axios.get("https://controlz.onrender.com/api/logout", {
+    axios.get("https://serverc-4y5e.onrender.com/logout", {
       withCredentials: true,
     })
 

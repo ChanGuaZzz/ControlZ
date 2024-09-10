@@ -50,7 +50,7 @@ function Perfil() {
       ObjCalorias: ObjCalorias,
       ObjProteinas: ObjProteinas,
     };
-    axios.post("https://controlz.onrender.com/api/modificar", values, { withCredentials: true })
+    axios.post("https://serverc-4y5e.onrender.com/modificar", values, { withCredentials: true })
       .then((res) => {
       })
       .catch((err) => console.error(err));
@@ -58,7 +58,7 @@ function Perfil() {
   }
   useEffect(() => {
     axios
-      .get("https://controlz.onrender.com/api/getSession", { withCredentials: true })
+      .get("https://serverc-4y5e.onrender.com/getSession", { withCredentials: true })
       .then((res) => {
         setUsuario(res.data.usuario);
         setNombre(res.data.nombre);

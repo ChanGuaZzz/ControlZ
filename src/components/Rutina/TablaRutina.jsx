@@ -50,14 +50,14 @@ const TablaRutina = () => {
   useEffect(() => {
     const obtenerRutina = async () => {
       try {
-        const resUsuario = await axios.get("https://controlz.onrender.com/api/getSession", {
+        const resUsuario = await axios.get("https://serverc-4y5e.onrender.com/getSession", {
           withCredentials: true,
         });
         const usuario = { usuario: resUsuario.data.usuario };
         setUsuarioSession(resUsuario.data.usuario);
 
         const resRutina = await axios.post(
-          "https://controlz.onrender.com/api/getrutina",
+          "https://serverc-4y5e.onrender.com/getrutina",
           usuario,
         );
 
@@ -88,7 +88,7 @@ const TablaRutina = () => {
     const actualizarRutina = async () => {
       try {
         const actualizar = await axios.post(
-          "https://controlz.onrender.com/api/ActualizarRutina",
+          "https://serverc-4y5e.onrender.com/ActualizarRutina",
           { id: usuarioSession, rutinaNueva: rutina },
         );
 

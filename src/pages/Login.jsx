@@ -174,7 +174,7 @@ function Login() {
     IrInicioSesion();
 
     axios
-      .post("https://controlz.onrender.com/api/registro", values) //envia values a "servidor/registro"
+      .post("https://serverc-4y5e.onrender.com/registro", values) //envia values a "servidor/registro"
       .then((res) => {
         console.log(res);
       })
@@ -186,7 +186,7 @@ function Login() {
     event.preventDefault();
 
     axios
-      .post("https://controlz.onrender.com/api/existeregistro", values) //envia values a "servidor/registro"
+      .post("https://serverc-4y5e.onrender.com/existeregistro", values) //envia values a "servidor/registro"
       .then((ccc) => {
         console.log(ccc);
 
@@ -220,13 +220,13 @@ function Login() {
     setshowMensajeNoExiste(false);
     axios
       .post(
-        "https://controlz.onrender.com/api/login",
+        "https://serverc-4y5e.onrender.com/login",
         { usuario: values.usuario, password: values.password },
         { withCredentials: true },
       )
       .then((res) => {
         axios
-          .get("https://controlz.onrender.com/api/getSession", { withCredentials: true }) //envia values a "servidor/registro"
+          .get("https://serverc-4y5e.onrender.com/getSession", { withCredentials: true }) //envia values a "servidor/registro"
           .then((res) => {
             console.log(res);
           })

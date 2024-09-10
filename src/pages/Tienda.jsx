@@ -43,7 +43,7 @@ function Tienda() {
   }, [ModalAbierto]);
 
   useEffect(() => {
-    axios.get("https://controlz.onrender.com/api/getSession", {
+    axios.get("https://serverc-4y5e.onrender.com/getSession", {
       withCredentials: true,
     }).then((res) => {
       setUsername(res.data.usuario || null);
@@ -64,7 +64,7 @@ function Tienda() {
     setLoading(true);
 
 
-      axios.post("https://controlz.onrender.com/api/addToCart", {
+      axios.post("https://serverc-4y5e.onrender.com/addToCart", {
         producto: {
         id: nombre,
         name: nombre,
