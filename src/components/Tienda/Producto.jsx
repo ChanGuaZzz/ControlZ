@@ -2,7 +2,7 @@ import { useEffect,useState } from "react";
 import axios from "axios";
 
 
-function Producto({addToCart, img, onClick, nombre, descripcion, precio, precioScam, descuento,setShowLoginRequiredModal }) {
+function Producto({addToCart, img, onClick, nombre, descripcion, precio, precioScam, descuento}) {
   
   const [username, setUsername] = useState();
   
@@ -12,20 +12,12 @@ function Producto({addToCart, img, onClick, nombre, descripcion, precio, precioS
     }
   };
 
-  useEffect(() => {
-    axios.get("https://serverc-4y5e.onrender.com/getSession", {
-      withCredentials: true,
-    }).then((res) => {
-      setUsername(res.data.usuario || null);
-    }).catch((error) => {
-      console.error(error);
-    });
-  }, []);
+
 
 
   const handleAddToCart = (e) => {
     e.stopPropagation(); // Evita que el evento se propague al contenedor
-    username ? addToCart({ nombre, precio, img }) : setShowLoginRequiredModal(true);
+    addToCart({ nombre, precio, img });
   };
   
   return (

@@ -5,23 +5,13 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 
-const ProductoModal = ({ product, closeModal, addToCart, setShowLoginRequiredModal}) => {
+const ProductoModal = ({ product, closeModal, addToCart,}) => {
   const [username, setUsername] = useState();
 
-  useEffect(() => {
-    axios.get("https://serverc-4y5e.onrender.com/getSession", {
-      withCredentials: true,
-    }).then((res) => {
-      setUsername(res.data.usuario || null);
-    }).catch((error) => {
-      console.error(error);
-    });
-  }, []);
 
   const handleAddToCard = () => {
 
-    username ? addToCart({ nombre: product.nombre, precio: product.precio, img: product.img }) : setShowLoginRequiredModal(true);//EROOOOOOR B
-
+    addToCart({ nombre: product.nombre, precio: product.precio, img: product.img });
     closeModal();
   };
   
