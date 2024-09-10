@@ -5,7 +5,11 @@ function Producto({addToCart, img, onClick, nombre, descripcion, precio, precioS
       onClick(); // Se aplica al contenedor completo
     }
   };
-
+  const handleAddToCart = (e) => {
+    e.stopPropagation(); // Evita que el evento se propague al contenedor
+    addToCart({ nombre, precio, img });
+  };
+  
   return (
     <div id="divProducto" className="tw-h-3/5 tw-flex tw-grow sm:tw-flex-wrap sm:tw-h-auto sm:tw-w-5/12 md:tw-w-1/4 lg:tw-flex-grow-0 lg:tw-w-1/5 lg:tw-h-1/3 tw-overflow-hidden tw-rounded-lg tw-bg-white tw-shadow-md" onClick={handleClick}>
       <div className="tw-flex tw-justify-center tw-w-2/5 sm:tw-w-full sm:tw-h-3/4 lg:tw-h-2/4 tw-bg-gray-300">
@@ -24,7 +28,7 @@ function Producto({addToCart, img, onClick, nombre, descripcion, precio, precioS
 
           {/*svg carrito*/}
 
-          <li onClick={addToCart({ nombre, precio, img })} className="tw-hidden tw-ml-auto sm:tw-block tw-lg:inline-block tw-align-middle tw-text-black hover:tw-text-gray-600">
+          <li onClick={handleAddToCart} className="tw-hidden tw-ml-auto sm:tw-block tw-lg:inline-block tw-align-middle tw-text-black hover:tw-text-gray-600">
             <a href="#" role="button" className="tw-relative tw-flex">
               <svg className="flipaa tw-flex-1 tw-fill-current" viewBox="0 0 24 24">
                 <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z" />
