@@ -1,13 +1,31 @@
+import { useEffect,useState } from "react";
+import axios from "axios";
+
 
 function Producto({addToCart, img, onClick, nombre, descripcion, precio, precioScam, descuento,setShowLoginRequiredModal }) {
+  
+  const [username, setUsername] = useState();
+  
   const handleClick = () => {
     if (window.innerWidth <= 640) { // Tamaño para pantallas pequeñas, puedes ajustar este valor
       onClick(); // Se aplica al contenedor completo
     }
   };
+
+  useEffect(() => {
+    axios.get("https://serverc-4y5e.onrender.com/getSession", {
+      withCredentials: true,
+    }).then((res) => {
+      setUsername(res.data.usuario || null);
+    }).catch((error) => {
+      console.error(error);
+    });
+  }, []);
+
+
   const handleAddToCart = (e) => {
     e.stopPropagation(); // Evita que el evento se propague al contenedor
-    addToCart({ nombre, precio, img });
+    username ? addToCart({ nombre, precio, img }) : setShowLoginRequiredModal(true);
   };
   
   return (

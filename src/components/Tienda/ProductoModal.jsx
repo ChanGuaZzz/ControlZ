@@ -1,11 +1,27 @@
 
 import React from 'react';
 import cruzCerrar from "../../img/cruzCerrar.png"
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-const ProductoModal = ({ product, closeModal, addToCart }) => {
+
+const ProductoModal = ({ product, closeModal, addToCart, setShowLoginRequiredModal}) => {
+  const [username, setUsername] = useState();
+
+  useEffect(() => {
+    axios.get("https://serverc-4y5e.onrender.com/getSession", {
+      withCredentials: true,
+    }).then((res) => {
+      setUsername(res.data.usuario || null);
+    }).catch((error) => {
+      console.error(error);
+    });
+  }, []);
 
   const handleAddToCard = () => {
-    addToCart({ nombre: product.nombre, precio: product.precio, img: product.img });
+
+    username ? addToCart({ nombre: product.nombre, precio: product.precio, img: product.img }) : setShowLoginRequiredModal(true);//EROOOOOOR B
+
     closeModal();
   };
   

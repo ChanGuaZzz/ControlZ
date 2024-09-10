@@ -205,6 +205,8 @@ function Tienda() {
             product={ProductoSeleccionado}
             closeModal={CerrarModal}
             addToCart = {addToCart}
+            setShowLoginRequiredModal={setShowLoginRequiredModal}
+
           />
         )}
 
