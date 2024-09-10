@@ -265,16 +265,16 @@ function Login() {
       .catch((err) => console.log(err));
   };
 
-  useEffect(() => {
-    console.log('useEffect triggered with showMensajeLoading:', showMensajeLoading);
+  // useEffect(() => {
+  //   console.log('useEffect triggered with showMensajeLoading:', showMensajeLoading);
 
    
 
-    return () => {
-      console.log('Cleaning up timeout');
-      clearTimeout(timer);
-    };
-  }, [showMensajeLoading]);
+  //   return () => {
+  //     console.log('Cleaning up timeout');
+  //     clearTimeout(timer);
+  //   };
+  // }, [showMensajeLoading]);
 
   return (
     <div className="fondoindex tw-h-screen tw-w-full ">
