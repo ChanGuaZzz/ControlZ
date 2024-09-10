@@ -11,7 +11,7 @@ export default function CarritoCompra({ refreshsession, visible, onClose, setNum
   const [username, setUsername] = useState();
 
   const sessions = () => {
-    axios.get("https://serverc-4y5e.onrender.com/getSession", {
+    axios.get("https://controlz.onrender.com/api/getSession", {
       withCredentials: true,
     }).then((res) => {
       setUsername(res.data.usuario || null);
@@ -49,7 +49,7 @@ export default function CarritoCompra({ refreshsession, visible, onClose, setNum
   const handleRemove = (productToRemove) => {
     productToRemove.quantity = 1;
     setLoading(true);
-    axios.post("https://serverc-4y5e.onrender.com/removeToCart", {
+    axios.post("https://controlz.onrender.com/api/removeToCart", {
       producto: productToRemove,
     }, {
       withCredentials: true,

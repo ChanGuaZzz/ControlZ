@@ -18,7 +18,7 @@ const Alimento = ({ producto, Horavalor, usuario, Fecha, update }) => {
 
 
   const addFood = () => {
-    axios.post('https://serverc-4y5e.onrender.com/AddAlimento', {
+    axios.post('https://controlz.onrender.com/api/AddAlimento', {
 
       nombre: producto.nombre,
       Horavalor: Horavalor,
