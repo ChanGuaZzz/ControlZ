@@ -14,7 +14,7 @@ const FoodModal = ({ closeModal, Horavalor, usuario, Fecha, update }) => {
   const fetchData = (page) => {
     setLoading(true);
     axios.post(
-      "https://serverc-4y5e.onrender.com/obtenerAlimento",
+      "https://controlz.onrender.com/api/obtenerAlimento",
       { userInput: userInput, offset: page * 10 }
     ).then(res => {
       setLoading(false);
