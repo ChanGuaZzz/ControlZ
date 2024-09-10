@@ -6,6 +6,7 @@ import proteinaPolvo from "../img/proteinaPolvo.png"
 import barraProteina from "../img/barraProteina.png"
 import { useState, useEffect } from "react";
 import LoginRequiredModal from "../components/LoginRequiredModal";
+import axios from "axios";
 
 function Tienda() {
 
