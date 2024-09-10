@@ -16,7 +16,7 @@ function Producto({refreshsession, setrefreshsession, img, onClick, nombre, desc
       withCredentials: true
     }).then((res) => {
       console.log(res.data);
-      ()=>{setrefreshsession}
+      setrefreshsession(!refreshsession);
     }).catch((error) => {
       console.error(error);
     });
