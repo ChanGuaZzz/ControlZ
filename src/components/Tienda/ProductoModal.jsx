@@ -2,10 +2,15 @@
 import React from 'react';
 import cruzCerrar from "../../img/cruzCerrar.png"
 
-const ProductoModal = ({ product, closeModal }) => {
+const ProductoModal = ({ product, closeModal, addToCart }) => {
+
+  const handleAddToCard = () => {
+    addToCart({ nombre: product.nombre, precio: product.precio, img: product.img });
+    closeModal();
+  };
+  
   return (
     <div className="tw-fixed tw-top-0 tw-left-0 tw-w-screen tw-h-screen NegroOpacidad75 tw-flex tw-items-center tw-justify-center">
-
       <div className="tw-bg-white tw-mx-2 tw-p-8 tw-rounded-lg tw-w-full tw-h-4/6 md:tw-w-4/5 lg:tw-w-3/5 tw-opacity-100 ">
         <img onClick={closeModal} className="tw-fixed PosCruzModal tw-h-10 tw-cursor-pointer tw-right-0 " src={cruzCerrar} />
         <div className='tw-flex tw-justify-center tw-h-2/3' >
@@ -21,7 +26,9 @@ const ProductoModal = ({ product, closeModal }) => {
           <p className="ModalDescText tw-mt-2 tw-flex tw-items-center tw-justify-center tw-h-3/6 sm:tw-text-lg md:tw-text-lg">
             <span>{product.descripcion}</span>
           </p>
-          <button className='tw-mt-3 tw-bg-yellow-300 tw-rounded-lg tw-p-2 tw-w-full text-s tw-h-2/6'>añadir al carrito</button>
+          <button onClick={handleAddToCard} className='tw-mt-3 tw-bg-yellow-300 tw-rounded-lg tw-p-2 tw-w-full hover:tw-bg-yellow-400 tw-h-2/6 tw-transition tw-duration-300'>
+          añadir al carrito
+          </button>
         </div>
 
       </div>

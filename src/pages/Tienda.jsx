@@ -204,6 +204,7 @@ function Tienda() {
           <ProductoModal
             product={ProductoSeleccionado}
             closeModal={CerrarModal}
+            addToCart = {addToCart}
           />
         )}
 
