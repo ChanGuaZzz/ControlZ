@@ -92,7 +92,7 @@ function Tienda() {
             descuento: "20%",
             img: barraProteina
           })}
-           setrefreshsession={setRefreshSession} refreshsession={refreshsession} nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra."} precio={20} precioScam={"25€"} descuento={"20%"}
+          addToCart={addToCart}  setrefreshsession={setRefreshSession} refreshsession={refreshsession} nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra."} precio={20} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={'https://controlz.onrender.com/assets/proteinaPolvo-CgX7OS6x.png'} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
@@ -102,7 +102,7 @@ function Tienda() {
             descuento: "20%",
             img: proteinaPolvo
           })}
-          setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!"} precio={20} precioScam={"25€"} descuento={"20%"}
+          addToCart={addToCart} setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!"} precio={20} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={"https://controlz.onrender.com/assets/barraProteina-DJXUMzq4.png"} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
@@ -113,7 +113,7 @@ function Tienda() {
             img: barraProteina
 
           })}
-          setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra."} precio={20} precioScam={"25€"} descuento={"20%"}
+          addToCart={addToCart} setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra."} precio={20} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={"https://controlz.onrender.com/assets/barraProteina-DJXUMzq4.png"} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
@@ -123,7 +123,7 @@ function Tienda() {
             descuento: "20%",
             img: barraProteina
           })}
-          setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra."} precio={20} precioScam={"25€"} descuento={"20%"}
+          addToCart={addToCart} setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra."} precio={20} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={'https://controlz.onrender.com/assets/proteinaPolvo-CgX7OS6x.png'} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
@@ -143,7 +143,7 @@ function Tienda() {
             descuento: "20%",
             img: barraProteina
           })}
-          setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. "} precio={20} precioScam={"25€"} descuento={"20%"}
+          addToCart={addToCart} setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. "} precio={20} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={'https://controlz.onrender.com/assets/proteinaPolvo-CgX7OS6x.png'} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
@@ -153,7 +153,7 @@ function Tienda() {
             descuento: "20%",
             img: proteinaPolvo
           })}
-          setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!"} precio={20} precioScam={"25€"} descuento={"20%"}
+          addToCart={addToCart} setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!"} precio={20} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={"https://controlz.onrender.com/assets/barraProteina-DJXUMzq4.png"} onClick={() => AbrirModal({
             nombre: "Barrita de Proteina",
@@ -163,7 +163,7 @@ function Tienda() {
             descuento: "20%",
             img: barraProteina
           })}
-          setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. "} precio={20} precioScam={"25€"} descuento={"20%"}
+          addToCart={addToCart} setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. "} precio={20} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={'https://controlz.onrender.com/assets/proteinaPolvo-CgX7OS6x.png'} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
@@ -183,7 +183,7 @@ function Tienda() {
             descuento: "20%",
             img: barraProteina
           })}
-          setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. "} precio={20} precioScam={"25€"} descuento={"20%"}
+          addToCart={addToCart} setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Barrita de Proteina"} descripcion={"Descubre la combinación perfecta de sabor y nutrición con la Barra de Proteína FitBar sabor Vainilla y Almendra. "} precio={20} precioScam={"25€"} descuento={"20%"}
           />
           <Producto img={'https://controlz.onrender.com/assets/proteinaPolvo-CgX7OS6x.png'} onClick={() => AbrirModal({
             nombre: "Proteina en polvo",
@@ -193,7 +193,7 @@ function Tienda() {
             descuento: "20%",
             img: proteinaPolvo
           })}
-          setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! "} precio={20} precioScam={"25€"} descuento={"20%"}
+          addToCart={addToCart} setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate! "} precio={20} precioScam={"25€"} descuento={"20%"}
           />
 
 
