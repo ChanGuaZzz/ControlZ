@@ -12,7 +12,7 @@ function Tienda() {
   const [ModalAbierto, setModalAbierto] = useState(false);
   const [ProductoSeleccionado, setProductoSeleccionado] = useState(null);
   const [refreshsession, setRefreshSession] = useState(false);
-  const [ShowLoginRequiredModal, setShowLoginRequiredModal] = useState(true); 
+  const [ShowLoginRequiredModal, setShowLoginRequiredModal] = useState(false); 
 
   const AbrirModal = (product) => {
     setProductoSeleccionado(product);
@@ -40,6 +40,29 @@ function Tienda() {
     };
   }, [ModalAbierto]);
 
+  const addToCart = () => { 
+    //==========GEEEEEYSON=========
+    //if (!session ) --> setShowLoginRequiredModal(true); return
+    //==========GEEEEEYSON=========
+
+      axios.post("https://serverc-4y5e.onrender.com/addToCart", {
+        producto: {
+        id: nombre,
+        name: nombre,
+        quantity: 1 ,
+        price: precio ,
+        imageSrc: img ,
+        }
+      }, {
+        withCredentials: true
+      }).then((res) => {
+        console.log(res.data);
+        setRefreshSession(!refreshsession);
+      }).catch((error) => {
+        console.error(error);
+      });
+    };
+
   return (
     <>
 
@@ -58,7 +81,7 @@ function Tienda() {
             descuento: "20%",
             img: proteinaPolvo
           })}
-          setrefreshsession={setRefreshSession} refreshsession={refreshsession}  nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!"} precio={20} precioScam={"25€"} descuento={"20%"}
+          addToCart={addToCart} setShowLoginRequiredModal={setShowLoginRequiredModal} nombre={"Proteina en polvo"} descripcion={"¡Lleva tu nutrición al siguiente nivel con la Proteína en Polvo Whey Pro sabor Chocolate!"} precio={20} precioScam={"25€"} descuento={"20%"}
 
           />
           <Producto img={"https://controlz.onrender.com/assets/barraProteina-DJXUMzq4.png"} onClick={() => AbrirModal({

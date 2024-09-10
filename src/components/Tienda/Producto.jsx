@@ -1,28 +1,7 @@
 import { useEffect } from "react";
 import axios from "axios";
 
-function Producto({refreshsession, setrefreshsession, img, onClick, nombre, descripcion, precio, precioScam, descuento }) {
- 
- const addToCart = () => { 
-  //if !session -> setModalSessionTrue()
-    axios.post("https://serverc-4y5e.onrender.com/addToCart", {
-      producto: {
-      id: nombre,
-      name: nombre,
-      quantity: 1 ,
-      price: precio ,
-      imageSrc: img ,
-      }
-    }, {
-      withCredentials: true
-    }).then((res) => {
-      console.log(res.data);
-      setrefreshsession(!refreshsession);
-    }).catch((error) => {
-      console.error(error);
-    });
-
-  };
+function Producto({addToCart, img, onClick, nombre, descripcion, precio, precioScam, descuento,setShowLoginRequiredModal }) {
  
  
   const handleClick = () => {
