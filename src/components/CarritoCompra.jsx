@@ -19,7 +19,6 @@ export default function CarritoCompra({refreshsession, visible, onClose, setNume
     });
   }
 
-  if(refreshsession){
     console.log("refreshsession existe")
   useEffect(() => {
 
@@ -27,7 +26,6 @@ export default function CarritoCompra({refreshsession, visible, onClose, setNume
     
 
   }, [refreshsession]);
-}
 
   useEffect(() => {
     sessions();
