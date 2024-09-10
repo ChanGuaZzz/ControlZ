@@ -52,6 +52,8 @@ function Tienda() {
     });
   }, []);
 
+  const [Loading, setLoading] = useState(false);
+
   const addToCart = ({ nombre, precio, img }) => {
     //==========GEEEEEYSON=========
     //if (!session ) --> setShowLoginRequiredModal(true); return
@@ -60,6 +62,8 @@ function Tienda() {
       setShowLoginRequiredModal(true);
       return;
     }
+
+    setLoading(true);
 
 
       axios.post("https://serverc-4y5e.onrender.com/addToCart", {
@@ -74,6 +78,7 @@ function Tienda() {
         withCredentials: true
       }).then((res) => {
         console.log(res.data);
+        setLoading(false);
         setRefreshSession(!refreshsession);
       }).catch((error) => {
         console.error(error);
@@ -82,7 +87,11 @@ function Tienda() {
 
   return (
     <>
-
+      {Loading && (
+        <div className="tw-fixed tw-inset-0 tw-bg-black tw-bg-opacity-[99.5%] tw-flex tw-items-center tw-justify-center tw-z-[99999999999999]">
+          <div className="tw-w-32 tw-h-32 tw-border-8 tw-border-t-8 tw-border-t-blue-500 tw-border-gray-200 tw-rounded-full tw-animate-spin"></div>
+        </div>
+      )}
     {ShowLoginRequiredModal &&  <LoginRequiredModal href={"#"} close={true} setShowLoginRequiredModal={setShowLoginRequiredModal} />}
    
       <div className="tw-min-h-screen tw-pt-[4.87rem] tw-bg-gradient-to-b tw-from-[#292929] tw-to-[#0d0d0d] tw-to-60%" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont' }}>
