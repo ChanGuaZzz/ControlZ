@@ -37,9 +37,9 @@ export default function CarritoCompra({ refreshsession, visible, onClose, setNum
 
 
 
-
-
+  const [Loading, setLoading] = useState(false);
   const [pricetotal, setPricetotal] = useState(0);
+  
 
 
   useEffect(() => {
@@ -50,11 +50,13 @@ export default function CarritoCompra({ refreshsession, visible, onClose, setNum
 
   const handleRemove = (productToRemove) => {
     productToRemove.quantity = 1;
+    setLoading(true);
     axios.post("https://serverc-4y5e.onrender.com/removeToCart", {
       producto: productToRemove,
     }, {
       withCredentials: true,
     }).then((res) => {
+      setLoading(false);
       sessions();
     }).catch((error) => {
       console.error(error);
@@ -67,7 +69,12 @@ export default function CarritoCompra({ refreshsession, visible, onClose, setNum
   }, [products]);
 
   return (
-
+    <>
+  {Loading && (
+        <div className="tw-fixed tw-inset-0 tw-bg-black tw-bg-opacity-[99.5%] tw-flex tw-items-center tw-justify-center tw-z-[99999999999999]">
+          <div className="tw-w-32 tw-h-32 tw-border-8 tw-border-t-8 tw-border-t-blue-500 tw-border-gray-200 tw-rounded-full tw-animate-spin"></div>
+        </div>
+      )}
     <Transition.Root show={visible} as={Fragment}>
       <Dialog as="div" className="tw-relative tw-z-10 " onClose={onClose}>
         <Transition.Child
@@ -215,6 +222,6 @@ export default function CarritoCompra({ refreshsession, visible, onClose, setNum
           </div>
         </div>
       </Dialog>
-    </Transition.Root>
+    </Transition.Root></>
   );
 }
