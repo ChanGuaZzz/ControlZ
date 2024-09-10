@@ -49,6 +49,7 @@ export default function CarritoCompra({ refreshsession, visible, onClose, setNum
 
 
   const handleRemove = (productToRemove) => {
+    productToRemove.quantity = 1;
     axios.post("https://serverc-4y5e.onrender.com/removeToCart", {
       producto: productToRemove,
     }, {
