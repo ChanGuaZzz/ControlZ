@@ -41,7 +41,7 @@ function Tienda() {
     };
   }, [ModalAbierto]);
 
-  const addToCart = () => { 
+  const addToCart = ({ nombre, precio, img }) => { 
     //==========GEEEEEYSON=========
     //if (!session ) --> setShowLoginRequiredModal(true); return
     //==========GEEEEEYSON=========
