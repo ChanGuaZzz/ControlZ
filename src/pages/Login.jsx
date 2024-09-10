@@ -196,6 +196,7 @@ function Login() {
           setShowMensajeCompletar(false);
           setShowMensajeEmail(false);
           setShowMensaje2(false);
+          setshowMensajeNoExiste(false);
         }
       })
       .catch((err) => console.error(err));
