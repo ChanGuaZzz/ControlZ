@@ -5,26 +5,28 @@ import proteinaPolvo from "../img/proteinaPolvo.png"
 import barraProteina from "../img/barraProteina.png"
 import axios from "axios";
 
-export default function CarritoCompra({refreshsession, visible, onClose, setNumeroItems }) {
+export default function CarritoCompra({ refreshsession, visible, onClose, setNumeroItems }) {
 
   const [products, setProducts] = useState([]);
+  const [username, setUsername] = useState();
 
-  const sessions= () => {
+  const sessions = () => {
     axios.get("https://serverc-4y5e.onrender.com/getSession", {
       withCredentials: true,
     }).then((res) => {
-    setProducts(res.data.carrito || []);
+      setUsername(res.data.usuario || null);
+      setProducts(res.data.carrito || []);
     }).catch((error) => {
       console.error(error);
     });
   }
 
-    
+
   useEffect(() => {
 
     sessions();
     console.log("refreshsession existe")
-    
+
 
   }, [refreshsession]);
 
@@ -35,16 +37,16 @@ export default function CarritoCompra({refreshsession, visible, onClose, setNume
 
 
 
-  
+
 
   const [pricetotal, setPricetotal] = useState(0);
 
-  
-   useEffect(() => {
+
+  useEffect(() => {
     const total = products.reduce((acc, product) => acc + (product.price * product.quantity), 0);
     setPricetotal(total);
   }, [products]);
-  
+
 
   const handleRemove = (productToRemove) => {
     setProducts((prev) => prev = products.filter(product => product !== productToRemove)); //devuelve cada producto si no es igual al que hay que eliminar
@@ -56,6 +58,7 @@ export default function CarritoCompra({refreshsession, visible, onClose, setNume
   }, [products]);
 
   return (
+
     <Transition.Root show={visible} as={Fragment}>
       <Dialog as="div" className="tw-relative tw-z-10 " onClose={onClose}>
         <Transition.Child
@@ -84,6 +87,26 @@ export default function CarritoCompra({refreshsession, visible, onClose, setNume
               >
                 <Dialog.Panel className="tw-pointer-events-auto tw-w-screen tw-max-w-md">
                   <div className="tw-flex tw-mt-[4.9rem]  tw-pt-0 tw-h-full tw-flex-col tw-overflow-y-scroll tw-bg-white tw-shadow-xl">
+                    {username == null && (
+                      <div className="tw-flex tw-flex-col tw-absolute justify-content-center tw-bg-black tw-bg-opacity-40  tw-h-full tw-w-full">
+                        <div className='tw-absolute tw-flex tw-justify-center tw-items-center tw-h-[50px] tw-w-[92%]  tw-top-[35%]'>
+                          <svg
+                            className=' tw-w-full tw-h-full  tw-pointer-events-none tw-text-gray-700 tw-dark:text-red-300'
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            height="40%"
+                            width="40%"
+
+                          >
+                            <path d="M17 9V7c0-2.8-2.2-5-5-5S7 4.2 7 7v2c-1.7 0-3 1.3-3 3v7c0 1.7 1.3 3 3 3h10c1.7 0 3-1.3 3-3v-7c0-1.7-1.3-3-3-3zM9 7c0-1.7 1.3-3 3-3s3 1.3 3 3v2H9V7zm4.1 8.5l-.1.1V17c0 .6-.4 1-1 1s-1-.4-1-1v-1.4c-.6-.6-.7-1.5-.1-2.1.6-.6 1.5-.7 2.1-.1.6.5.7 1.5.1 2.1z" />
+                          </svg>
+                        </div>
+                        <div className="tw-flex tw-justify-center tw-items-center tw-h-20 tw-w-[92%] tw-bg-red-500 tw-text-white">
+                          <p>Para añadir productos al carrito debes <a className='tw-font-semibold tw-underline' href='/login'>iniciar sesión</a></p>
+                        </div>
+                      </div>
+
+                    )}
                     <div className="tw-flex-1 tw-overflow-y-auto tw-px-4 tw-pb-6 tw-pt-3 tw-sm:tw-px-6">
                       <div className="tw-flex tw-items-start tw-justify-between">
                         <Dialog.Title className="tw-text-lg tw-font-medium tw-text-gray-900">
@@ -105,7 +128,7 @@ export default function CarritoCompra({refreshsession, visible, onClose, setNume
                       <div className="">
                         <div className="tw-flow-root">
                           <ul role="list" className=" tw-divide-y tw-divide-gray-200">
-                            {products.length >0 ? products.map((product) => (
+                            {products.length > 0 ? products.map((product) => (
                               <li key={product.id} className="tw-flex tw-py-4"> {/*cambio*/}
                                 <div className=" tw-w-[38%] tw-flex-shrink-0 tw-overflow-hidden tw-rounded-md tw-border tw-border-gray-200">
                                   <img
@@ -141,7 +164,7 @@ export default function CarritoCompra({refreshsession, visible, onClose, setNume
                                 </div>
                               </li>
                             ))
-                          : <p>No hay productos en el carrito</p>}
+                              : <p>No hay productos en el carrito</p>}
                           </ul>
                         </div>
                       </div>
