@@ -40,9 +40,10 @@ export default function CarritoCompra({refreshsession, visible, onClose, setNume
   const [pricetotal, setPricetotal] = useState(0);
 
   
-  useEffect(() => {
-    setPricetotal(products.reduce((acc, product) => acc + product.price, 0));
-  }, [products])
+   useEffect(() => {
+    const total = products.reduce((acc, product) => acc + (product.price * product.quantity), 0);
+    setPricetotal(total);
+  }, [products]);
   
 
   const handleRemove = (productToRemove) => {
