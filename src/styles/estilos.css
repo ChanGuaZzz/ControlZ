@@ -480,7 +480,7 @@
     display: none;
   }
 }
-#logearse, #registrarse, #reg2 {
+#logearse {
   height: 75vh;
 }
 @media (max-width: 550px) {
@@ -490,5 +490,10 @@
   .loading
   {
     margin-top: 20vh !important;
+  }
+  .loadingRegistro
+  {
+    margin-top: 2vh !important;
+    margin-right:30% ;
   }
 }

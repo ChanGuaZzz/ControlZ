@@ -186,7 +186,10 @@ function Login() {
 
   const ComprobarReg = (event) => {
     event.preventDefault();
-
+    setshowMensajeLoading(true);
+    setTimeout(() => {
+      setshowMensajeTardar(true);
+    }, 15000);
     axios
       .post("https://controlz.onrender.com/api/existeregistro", values) //envia values a "servidor/registro"
       .then((ccc) => {
@@ -203,7 +206,7 @@ function Login() {
           setshowMensajeNoExiste(false);
         }
       })
-      .catch((err) => console.error(err));
+      .catch((err) => console.error(err)).finally(()=>{setshowMensajeLoading(false); setshowMensajeTardar(false) }); ;
   };
 
   //mandamos a servidor/login los datos para trabajar con ellos
@@ -257,14 +260,6 @@ function Login() {
         }
       })
   };
-
-  useEffect(() => {
-    if(!showMensajeLoading){
-    setTimeout(() => {
-      setshowMensajeTardar(true);
-    }, 15000);
-  }
-  }, [showMensajeLoading]);
 
   return (
     <div className="fondoindex tw-h-screen tw-w-full ">
@@ -729,7 +724,7 @@ function Login() {
                 {showMensajeLoading && (
                   <>
                     <span
-                      className="position-absolute loading"
+                      className="position-absolute loadingRegistro"
                       style={{ left: 50, right: 50, marginTop: "2%" }}
                     >
                       <Loading />
