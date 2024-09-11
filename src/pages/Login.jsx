@@ -79,6 +79,8 @@ function Login() {
     setVisibleRegistro(false);
 
     setVisibleRegistro2(false);
+    setshowMensajeTardar(false);
+    setshowMensajeLoading(false);
     setVisibleIniciarSesion(true);
   };
 
@@ -94,6 +96,8 @@ function Login() {
     setVisibleIniciarSesion(false);
     setVisibleRegistro2(false);
     setVisibleRegistro(true);
+    setshowMensajeTardar(false);
+    setshowMensajeLoading(false);
   };
 
   useEffect(() => {
@@ -261,9 +265,11 @@ function Login() {
   };
 
   useEffect(() => {
+    if(!showMensajeLoading){
     setTimeout(() => {
       setshowMensajeTardar(true);
     }, 15000);
+  }
   }, [showMensajeLoading]);
 
   return (
@@ -726,6 +732,28 @@ function Login() {
                 >
                   Debes escribir en todos los campos
                 </p>
+                {showMensajeLoading && (
+                  <>
+                    <span
+                      className="position-absolute loading"
+                      style={{ left: 50, right: 50, marginTop: "2%" }}
+                    >
+                      <Loading />
+                    </span>
+                    {showMensajeTardar && (
+                      <p
+                        id="mensajePuedeTardar"
+                        className={`${animacion} text-danger position-absolute mensajeslogin`}
+                        style={{
+                          height: "10px",
+                          marginTop: "17%",
+                        }}
+                      >
+                        Puede tardar unos segundos...
+                      </p>
+                    )}
+                  </>
+                )}
 
                 <br></br>
                 <div className="">
