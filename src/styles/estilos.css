@@ -480,7 +480,7 @@
     display: none;
   }
 }
-#logearse {
+#logearse, #registrarse, #reg2 {
   height: 75vh;
 }
 @media (max-width: 550px) {

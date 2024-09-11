@@ -567,7 +567,7 @@ function Login() {
           <div className="tw-flex tw-w-full tw-items-center tw-justify-center tw-pt-20">
             <div
               className="login-box tw-h-full tw-border-cyan-50 tw-px-16 tw-py-8 md:tw-px-32"
-              id="registrar"
+              id="registrarse"
             >
               <h2 className="text-center tw-text-[2.2rem] tw-font-semibold  tw-text-white  sm:tw-text-[3rem]">
                 Crea tu Perfil
@@ -726,6 +726,28 @@ function Login() {
                 >
                   Debes escribir en todos los campos
                 </p>
+                {showMensajeLoading && (
+                  <>
+                    <span
+                      className="position-absolute loading"
+                      style={{ left: 50, right: 50, marginTop: "2%" }}
+                    >
+                      <Loading />
+                    </span>
+                    {showMensajeTardar && (
+                      <p
+                        id="mensajePuedeTardar"
+                        className={`${animacion} text-danger position-absolute mensajeslogin`}
+                        style={{
+                          height: "10px",
+                          marginTop: "17%",
+                        }}
+                      >
+                        Espera unos segundos...
+                      </p>
+                    )}
+                  </>
+                )}
 
                 <br></br>
                 <div className="">
@@ -758,7 +780,7 @@ function Login() {
           <div className="tw-flex tw-w-full tw-items-center tw-justify-center tw-py-20">
             <div
               className="login-box tw-h-full tw-border-cyan-50 tw-px-16 tw-py-8 md:tw-px-28 "
-              id="reg"
+              id="reg2"
             >
               <h2 className="text-center tw-text-[2.2rem] tw-font-semibold tw-text-white sm:tw-text-[3.5rem] md:tw-text-[4rem]">
                 Crea tu Perfil
