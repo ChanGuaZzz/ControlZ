@@ -178,35 +178,29 @@ function Login() {
     IrInicioSesion();
 
     axios
-      .post("https://serverc-4y5e.onrender.com/registro", values) //envia values a "servidor/registro"
+      .post("https://controlz.onrender.com/api/registro", values) //envia values a "servidor/registro"
       .then((res) => {
-        console.log(res);
       })
       .catch((err) => console.error(err));
   };
 
   const ComprobarReg = (event) => {
-    console.log("loqesea");
     event.preventDefault();
 
     axios
-      .post("https://serverc-4y5e.onrender.com/existeregistro", values) //envia values a "servidor/registro"
+      .post("https://controlz.onrender.com/api/existeregistro", values) //envia values a "servidor/registro"
       .then((ccc) => {
-        console.log(ccc);
 
-        console.log(ccc.status);
 
         if (ccc.status == 200) {
           cambiarDisplayRegistro2();
-          console.log("entro al 200");
         } else {
-          console.log("entro al 201");
-
           setshowErrorRegistro(true);
           setShowMensaje1(false);
           setShowMensajeCompletar(false);
           setShowMensajeEmail(false);
           setShowMensaje2(false);
+          setshowMensajeNoExiste(false);
         }
       })
       .catch((err) => console.error(err));
@@ -216,23 +210,25 @@ function Login() {
   const SumbitLogin = (event) => {
     event.preventDefault();
     setshowMensajeLoading(true);
+    setTimeout(() => {
+      setshowMensajeTardar(true);
+    }, 15000);
+
     setshowMensajeNoExiste(false);
     axios
       .post(
-        "https://serverc-4y5e.onrender.com/login",
+        "https://controlz.onrender.com/api/login",
         { usuario: values.usuario, password: values.password },
         { withCredentials: true },
       )
       .then((res) => {
         axios
-          .get("https://serverc-4y5e.onrender.com/getSession", { withCredentials: true }) //envia values a "servidor/registro"
+          .get("https://controlz.onrender.com/api/getSession", { withCredentials: true }) //envia values a "servidor/registro"
           .then((res) => {
-            console.log(res);
           })
           .catch((err) => console.error(err))
           .finally(setshowMensajeLoading(false));
 
-        console.log(res);
         if (res.data.redirectTo != undefined) {
           window.location.href = res.data.redirectTo;
         } else if (
@@ -248,7 +244,6 @@ function Login() {
             }, 1000);
           }
         } else {
-          console.log("entro al 201");
           setshowMensajeInicio(false);
 
           if (!showMensajeNoExiste) {
@@ -261,7 +256,6 @@ function Login() {
           }
         }
       })
-      .catch((err) => console.log(err));
   };
 
   useEffect(() => {
@@ -538,7 +532,7 @@ function Login() {
                           marginTop: "17%",
                         }}
                       >
-                        Puede tardar unos segundos...
+                        Espera unos segundos...
                       </p>
                     )}
                   </>
@@ -732,28 +726,6 @@ function Login() {
                 >
                   Debes escribir en todos los campos
                 </p>
-                {showMensajeLoading && (
-                  <>
-                    <span
-                      className="position-absolute loading"
-                      style={{ left: 50, right: 50, marginTop: "2%" }}
-                    >
-                      <Loading />
-                    </span>
-                    {showMensajeTardar && (
-                      <p
-                        id="mensajePuedeTardar"
-                        className={`${animacion} text-danger position-absolute mensajeslogin`}
-                        style={{
-                          height: "10px",
-                          marginTop: "17%",
-                        }}
-                      >
-                        Puede tardar unos segundos...
-                      </p>
-                    )}
-                  </>
-                )}
 
                 <br></br>
                 <div className="">

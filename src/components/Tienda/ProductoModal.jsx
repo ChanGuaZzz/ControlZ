@@ -1,10 +1,16 @@
 
 import React from 'react';
 import cruzCerrar from "../../img/cruzCerrar.png"
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-const ProductoModal = ({ product, closeModal, addToCart }) => {
+
+const ProductoModal = ({ product, closeModal, addToCart,}) => {
+  const [username, setUsername] = useState();
+
 
   const handleAddToCard = () => {
+
     addToCart({ nombre: product.nombre, precio: product.precio, img: product.img });
     closeModal();
   };

@@ -18,7 +18,7 @@ const Alimento = ({ producto, Horavalor, usuario, Fecha, update }) => {
 
 
   const addFood = () => {
-    axios.post('https://serverc-4y5e.onrender.com/AddAlimento', {
+    axios.post('https://controlz.onrender.com/api/AddAlimento', {
 
       nombre: producto.nombre,
       Horavalor: Horavalor,
@@ -53,7 +53,7 @@ const Alimento = ({ producto, Horavalor, usuario, Fecha, update }) => {
               inputVisible && <AlimentoCantidadInput nombre={producto.nombre} closeModal={toggleInput} value={Cantidad} onChange={(e) => setCantidad(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') addFood() }} update={update} addFood={addFood} />}
           </h3>
         </div>
-        <div className="tw-flex tw-gap-2 tw-items-center tw-justify-center tw-bg-gray-300 tw-cursor-pointer" onMouseEnter={() => setCaracteristicasVisibles(true)} onMouseLeave={() => setCaracteristicasVisibles(false)}  onClick={() =>setCaracteristicasVisibles(true)}>
+        <div className="tw-flex tw-gap-2 tw-items-center tw-justify-center tw-bg-gray-300 tw-cursor-pointer" onMouseEnter={() => setCaracteristicasVisibles(true)} onMouseLeave={() => setCaracteristicasVisibles(false)} onClick={() => setCaracteristicasVisibles(true)}>
           {!caracteristicasVisibles && (
             <div className="tw-h-[12rem]">
               <img className="tw-w-full tw-h-full tw-max-h-80 tw-rounded-md" src={producto.imagenUrl !== "URL de imagen no disponible" ? producto.imagenUrl : notAviable} alt="Imagen del producto" />
